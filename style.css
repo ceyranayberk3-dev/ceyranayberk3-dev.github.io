@@ -462,6 +462,40 @@ img{ max-width: 100%; display: block; }
   border-top: 1px solid var(--color-rule);
 }
 
+/* İmza animasyonu */
+.site-signature{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.4rem;
+}
+
+.site-signature svg{
+  width: clamp(180px, 30vw, 260px);
+  height: auto;
+  display: block;
+}
+
+.sig-stroke{
+  fill: none;
+  stroke: var(--color-gold-soft);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .sig-stroke{
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
 /* ---------------------------------------------------------------
    Erişilebilirlik
 --------------------------------------------------------------- */
@@ -474,4 +508,40 @@ button:focus-visible{
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *{ transition: none !important; }
+}
+
+/* İmza — kalem hareketleri (keyframes) */
+@keyframes sigDraw0 {
+  0% { stroke-dashoffset: 1; }
+  0.000% { stroke-dashoffset: 1; }
+  19.114% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes sigDraw1 {
+  0% { stroke-dashoffset: 1; }
+  19.114% { stroke-dashoffset: 1; }
+  36.282% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes sigDraw2 {
+  0% { stroke-dashoffset: 1; }
+  36.282% { stroke-dashoffset: 1; }
+  68.111% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes sigDraw3 {
+  0% { stroke-dashoffset: 1; }
+  68.111% { stroke-dashoffset: 1; }
+  70.055% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes sigDraw4 {
+  0% { stroke-dashoffset: 1; }
+  70.055% { stroke-dashoffset: 1; }
+  72.000% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
 }
