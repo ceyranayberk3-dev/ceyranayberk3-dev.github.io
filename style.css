@@ -85,13 +85,14 @@ img{ max-width: 100%; display: block; }
 }
 
 .brand-mark{
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: var(--tracking-wide);
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
-  padding: 0.35rem 0.65rem;
+  display: block;
   line-height: 1;
+}
+
+.brand-mark img{
+  width: 46px;
+  height: 46px;
+  display: block;
 }
 
 .main-nav ul{
