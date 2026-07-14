@@ -90,9 +90,11 @@ img{ max-width: 100%; display: block; }
 }
 
 .brand-mark img{
-  width: 46px;
-  height: 46px;
+  width: 46px !important;
+  height: 46px !important;
+  max-width: 46px !important;
   display: block;
+  object-fit: contain;
 }
 
 .main-nav ul{
