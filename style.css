@@ -1,0 +1,474 @@
+/* ============================================================
+   AYBERK CEYRAN — Kişisel Siyasi Site
+   Tasarım Sistemi (Design Tokens)
+   ============================================================ */
+
+:root{
+  /* Renkler */
+  --color-bg:        #FAFAFA;   /* Off-white — asalet */
+  --color-bg-alt:     #F3F1EC;  /* Bölüm ayrımı için hafif ton */
+  --color-gold:       #D4AF37;  /* Metallic Gold — CEYRAN */
+  --color-gold-soft:  #C5A059;  /* Alternatif / dijital altın */
+  --color-ink:        #1A1A1A; /* Soft Black — gövde metni */
+  --color-ink-muted:  #55524B; /* İkincil metin */
+  --color-rule:       #E4E0D6; /* İnce ayraç çizgileri */
+
+  /* Tipografi */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+
+  --tracking-wide: 0.14em;
+  --tracking-mid:  0.06em;
+
+  --measure: 62ch;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3{
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+ul{ list-style: none; margin: 0; padding: 0; }
+
+img{ max-width: 100%; display: block; }
+
+/* Sürekli ince altın çizgi motifi — imza öğesinin devamı */
+.rule-left{
+  position: fixed;
+  top: 0; left: 0;
+  width: 1px;
+  height: 100vh;
+  background: linear-gradient(to bottom, transparent, var(--color-gold) 12%, var(--color-gold) 88%, transparent);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+@media (max-width: 900px){
+  .rule-left{ display: none; }
+}
+
+/* ---------------------------------------------------------------
+   Header / Navigasyon
+--------------------------------------------------------------- */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem clamp(1.5rem, 5vw, 4rem);
+  background: rgba(250, 250, 250, 0.86);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.brand-mark{
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  padding: 0.35rem 0.65rem;
+  line-height: 1;
+}
+
+.main-nav ul{
+  display: flex;
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+}
+
+.main-nav a{
+  font-size: 0.82rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  position: relative;
+  padding-bottom: 0.3rem;
+  transition: color 0.25s ease;
+}
+
+.main-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible{
+  color: var(--color-ink);
+}
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after{
+  width: 100%;
+}
+
+.nav-toggle{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.nav-toggle span{
+  width: 22px;
+  height: 1px;
+  background: var(--color-ink);
+}
+
+@media (max-width: 720px){
+  .nav-toggle{ display: flex; }
+  .main-nav ul{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-rule);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .main-nav ul.open{ max-height: 320px; }
+  .main-nav a{
+    display: block;
+    padding: 1rem clamp(1.5rem, 5vw, 4rem);
+    border-top: 1px solid var(--color-rule);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Hero
+--------------------------------------------------------------- */
+.hero{
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem);
+}
+
+.hero-eyebrow{
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0 0 1.6rem;
+}
+
+.hero-name{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-first{
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-ink);
+}
+
+.hero-last{
+  font-size: clamp(3.6rem, 12vw, 8.5rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.hero-tagline{
+  margin-top: 1.8rem;
+  font-style: italic;
+  color: var(--color-ink-muted);
+  font-size: 1.05rem;
+}
+
+.hero-divider{
+  margin-top: 2.6rem;
+  width: 64px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+/* ---------------------------------------------------------------
+   Bölümler (genel)
+--------------------------------------------------------------- */
+.section{
+  padding: 6rem clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--color-rule);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-head{
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-index{
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+}
+
+.section-head h2{
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.section-body p{
+  max-width: var(--measure);
+  color: var(--color-ink);
+}
+
+/* Hakkımda */
+.about-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+
+.about-text blockquote{
+  margin: 2rem 0 0;
+  padding-left: 1.4rem;
+  border-left: 2px solid var(--color-gold);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+
+.about-facts dl div{
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.about-facts dl div:last-child{ border-bottom: 1px solid var(--color-rule); }
+
+.about-facts dt{
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: 0.3rem;
+}
+.about-facts dd{
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 780px){
+  .about-grid, .contact-grid{ grid-template-columns: 1fr; }
+}
+
+/* Projeler */
+.project-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item{
+  padding: 2.2rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.project-item:last-child{ border-bottom: 1px solid var(--color-rule); }
+
+.project-item h3{
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-item p{
+  max-width: var(--measure);
+  color: var(--color-ink-muted);
+}
+
+/* Blog / Makale */
+.post-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-item{
+  padding: 2.2rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.post-item:last-child{ border-bottom: 1px solid var(--color-rule); }
+
+.post-date{
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3{
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3 a{
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+.post-item h3 a:hover,
+.post-item h3 a:focus-visible{
+  border-color: var(--color-gold);
+}
+
+.post-item p{ color: var(--color-ink-muted); }
+
+/* İletişim */
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+}
+
+.contact-list{
+  margin-top: 1.6rem;
+}
+.contact-list li{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.contact-list li:last-child{ border-bottom: 1px solid var(--color-rule); }
+
+.contact-list span{
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.contact-list a{
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+.contact-list a:hover,
+.contact-list a:focus-visible{
+  border-color: var(--color-gold);
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label{
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 1.1rem 0 0.4rem;
+}
+.contact-form label:first-child{ margin-top: 0; }
+
+.contact-form input,
+.contact-form textarea{
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-rule);
+  padding: 0.75rem 0.9rem;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.contact-form button{
+  margin-top: 1.6rem;
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  padding: 0.85rem 2rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible{
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.form-note{
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------
+   Footer
+--------------------------------------------------------------- */
+.site-footer{
+  padding: 2.5rem clamp(1.5rem, 5vw, 4rem) 3rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--color-ink-muted);
+  border-top: 1px solid var(--color-rule);
+}
+
+/* ---------------------------------------------------------------
+   Erişilebilirlik
+--------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ transition: none !important; }
+}
