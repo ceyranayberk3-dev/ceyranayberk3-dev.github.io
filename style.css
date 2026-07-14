@@ -78,7 +78,7 @@ img{ max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem clamp(1.5rem, 5vw, 4rem);
+  padding: 1.6rem clamp(1.5rem, 5vw, 4rem);
   background: rgba(250, 250, 250, 0.86);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--color-rule);
@@ -90,9 +90,9 @@ img{ max-width: 100%; display: block; }
 }
 
 .brand-mark img{
-  width: 72px !important;
-  height: 72px !important;
-  max-width: 72px !important;
+  width: 96px !important;
+  height: 96px !important;
+  max-width: 96px !important;
   display: block;
   object-fit: contain;
 }
