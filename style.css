@@ -9,6 +9,7 @@
   --color-bg-alt:     #F3F1EC;  /* Bölüm ayrımı için hafif ton */
   --color-gold:       #D4AF37;  /* Metallic Gold — CEYRAN */
   --color-gold-soft:  #C5A059;  /* Alternatif / dijital altın */
+  --color-gold-dark:  #9C7A2E;  /* Hafif koyu altın — ayırıcı çizgi ve menü vurgusu */
   --color-ink:        #1A1A1A; /* Soft Black — gövde metni */
   --color-ink-muted:  #55524B; /* İkincil metin */
   --color-rule:       #E4E0D6; /* İnce ayraç çizgileri */
@@ -62,7 +63,7 @@ img{ max-width: 100%; display: block; }
   top: 0; left: 0;
   width: 1px;
   height: 100vh;
-  background: linear-gradient(to bottom, transparent, var(--color-gold) 12%, var(--color-gold) 88%, transparent);
+  background: linear-gradient(to bottom, transparent, var(--color-gold-dark) 12%, var(--color-gold-dark) 88%, transparent);
   opacity: 0.35;
   z-index: 1;
 }
@@ -102,12 +103,13 @@ img{ max-width: 100%; display: block; }
 
 .main-nav ul{
   display: flex;
-  gap: clamp(1.2rem, 3vw, 2.6rem);
+  gap: clamp(2rem, 5vw, 4.2rem);
 }
 
 .main-nav a{
-  font-size: 0.82rem;
-  letter-spacing: var(--tracking-mid);
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--color-ink-muted);
   position: relative;
@@ -121,7 +123,7 @@ img{ max-width: 100%; display: block; }
   left: 0; bottom: 0;
   width: 0;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-gold-dark);
   transition: width 0.3s ease;
 }
 
