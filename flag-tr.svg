@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Ayberk Ceyran",
+    "description": "Ayberk Ceyran — Official Website",
+    "titleHome": "Ayberk Ceyran",
+    "titleAbout": "About | Ayberk Ceyran",
+    "titleProjects": "Projects | Ayberk Ceyran",
+    "titleBlog": "Blog / Articles | Ayberk Ceyran",
+    "titleContact": "Contact | Ayberk Ceyran"
+  },
+  "header": {
+    "logoAlt": "Ayberk Ceyran logo",
+    "navAriaLabel": "Main menu",
+    "langSwitchAriaLabel": "Language selector"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog / Articles",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Economics · Political Science & Public Administration",
+    "quoteText": "“Freedom and independence are my character.”",
+    "quoteAuthor": "— Mustafa Kemal Atatürk"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "heading": "Ayberk Ceyran",
+    "paragraph1": "I was born in 2007. I'm interested in economics, software, data analysis, and artificial intelligence, and I keep working to develop myself in these areas — particularly in Python, web development, and data science. I'm also preparing for the SAT and aiming to study economics in Canada.",
+    "paragraph2": "I created this website to share my projects, research, articles, and the work I'll keep developing over time. While documenting my own learning process, I hope the content I produce can also be useful to others.",
+    "paragraph3": "In the long run, I aim to develop projects that bring technology and economics together, pursue academic work, and contribute to the production of knowledge.",
+    "paragraph4": "The most important figure who has inspired me throughout my life is Gazi Mustafa Kemal Atatürk, the founder of our Republic. The importance he placed on science, reason, freedom, and modernization is among the core values I hold as well.",
+    "paragraph5": "Thank you for visiting my website.",
+    "factBirthplace": "Birthplace",
+    "factEducation": "Education",
+    "factField": "Field",
+    "factFieldValue": "Public Policy"
+  },
+  "projects": {
+    "sectionLabel": "Projects",
+    "heading": "Projects",
+    "items": [
+      {
+        "title": "Open Budget Initiative",
+        "description": "A project making public spending visible to everyone through plain-language, regular reports."
+      },
+      {
+        "title": "Neighborhood Councils",
+        "description": "A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice."
+      },
+      {
+        "title": "Youth Policy Workshop",
+        "description": "An education and mentorship program aiming to make young people founding partners in politics, not just spectators."
+      }
+    ]
+  },
+  "blog": {
+    "sectionLabel": "Blog / Articles",
+    "heading": "Blog / Articles",
+    "posts": [
+      {
+        "date": "July 14, 2026",
+        "title": "Why Local Transparency Can Also Work at the National Scale",
+        "description": "A short assessment of how opening up budget data helps rebuild trust."
+      },
+      {
+        "date": "June 2, 2026",
+        "title": "Listening Is a Form of Governance",
+        "description": "Notes and lessons from the first six months of the neighborhood councils."
+      },
+      {
+        "date": "April 18, 2026",
+        "title": "Politics Built With Young People",
+        "description": "Observations from the first term of the Youth Policy Workshop."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading": "Contact",
+    "intro": "You can reach me for feedback, suggestions, and collaboration requests.",
+    "formAriaLabel": "Contact form",
+    "labelEmail": "Email",
+    "labelInstagram": "Instagram",
+    "labelX": "X",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Your Message",
+      "submit": "Send",
+      "note": "This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

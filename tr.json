@@ -1,7 +1,12 @@
 {
   "meta": {
     "title": "Ayberk Ceyran",
-    "description": "Ayberk Ceyran — Resmî Web Sitesi"
+    "description": "Ayberk Ceyran — Resmî Web Sitesi",
+    "titleHome": "Ayberk Ceyran",
+    "titleAbout": "Hakkımda | Ayberk Ceyran",
+    "titleProjects": "Projeler | Ayberk Ceyran",
+    "titleBlog": "Blog / Makale | Ayberk Ceyran",
+    "titleContact": "İletişim | Ayberk Ceyran"
   },
   "header": {
     "logoAlt": "Ayberk Ceyran logosu",

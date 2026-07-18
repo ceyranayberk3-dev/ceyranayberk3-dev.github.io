@@ -108,10 +108,10 @@ img{ max-width: 100%; display: block; }
 
 .main-nav a{
   font-size: 0.98rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   position: relative;
   padding-bottom: 0.3rem;
   transition: color 0.25s ease;
@@ -189,6 +189,9 @@ img{ max-width: 100%; display: block; }
 }
 
 .lang-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: var(--tracking-mid);
@@ -199,6 +202,15 @@ img{ max-width: 100%; display: block; }
   cursor: pointer;
   transition: color 0.25s ease;
   white-space: nowrap;
+}
+
+.flag-icon{
+  display: block;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .lang-btn:hover,

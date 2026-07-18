@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.titleHome">Ayberk Ceyran</title>
+<title data-i18n="meta.titleContact">Ayberk Ceyran</title>
 <meta name="description" content="Ayberk Ceyran — Official Website" data-i18n-content="meta.description">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -31,11 +31,11 @@
         <span></span><span></span><span></span>
       </button>
       <ul id="nav-list">
-        <li><a href="/" class="is-current" aria-current="page" data-i18n="nav.home">Home</a></li>
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
         <li><a href="/hakkimda/" data-i18n="nav.about">About</a></li>
         <li><a href="/projeler/" data-i18n="nav.projects">Projects</a></li>
         <li><a href="/blog/" data-i18n="nav.blog">Blog / Articles</a></li>
-        <li><a href="/iletisim/" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="/iletisim/" class="is-current" aria-current="page" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -49,18 +49,34 @@
 
 <main>
 
-  <section id="top" class="hero">
-    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Economics · Political Science &amp; Public Administration</p>
-    <h1 class="hero-name">
-      <span class="hero-first">AYBERK</span>
-      <span class="hero-last">CEYRAN</span>
-    </h1>
-    <p class="hero-tagline">
-      <span class="hero-quote-text" data-i18n="hero.quoteText">&ldquo;Freedom and independence are my character.&rdquo;</span>
-      <br>
-      <span class="hero-quote-author" data-i18n="hero.quoteAuthor">&mdash; Mustafa Kemal Atat&uuml;rk</span>
-    </p>
-    <div class="hero-divider" aria-hidden="true"></div>
+  <section id="iletisim" class="section">
+    <div class="section-head">
+      <span class="section-index" data-i18n="contact.sectionLabel">Contact</span>
+      <h2 data-i18n="contact.heading">Contact</h2>
+    </div>
+    <div class="section-body contact-grid">
+      <div class="contact-info">
+        <p data-i18n="contact.intro">You can reach me for feedback, suggestions, and collaboration requests.</p>
+        <ul class="contact-list">
+          <li><span data-i18n="contact.labelEmail">Email</span><a href="mailto:iletisim@ayberkceyran.com">iletisim@ayberkceyran.com</a></li>
+          <li><span data-i18n="contact.labelInstagram">Instagram</span><a href="#">@ayberkceyran</a></li>
+          <li><span data-i18n="contact.labelX">X</span><a href="#">@ayberkceyran</a></li>
+        </ul>
+      </div>
+      <form class="contact-form" aria-label="Contact form" data-i18n-aria-label="contact.formAriaLabel">
+        <label for="name" data-i18n="contact.form.name">Full Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email" data-i18n="contact.form.email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="message" data-i18n="contact.form.message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" data-i18n="contact.form.submit">Send</button>
+        <p class="form-note" data-i18n="contact.form.note">This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions.</p>
+      </form>
+    </div>
   </section>
 
 </main>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.titleHome">Ayberk Ceyran</title>
+<title data-i18n="meta.titleAbout">Ayberk Ceyran</title>
 <meta name="description" content="Ayberk Ceyran — Official Website" data-i18n-content="meta.description">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -31,8 +31,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul id="nav-list">
-        <li><a href="/" class="is-current" aria-current="page" data-i18n="nav.home">Home</a></li>
-        <li><a href="/hakkimda/" data-i18n="nav.about">About</a></li>
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
+        <li><a href="/hakkimda/" class="is-current" aria-current="page" data-i18n="nav.about">About</a></li>
         <li><a href="/projeler/" data-i18n="nav.projects">Projects</a></li>
         <li><a href="/blog/" data-i18n="nav.blog">Blog / Articles</a></li>
         <li><a href="/iletisim/" data-i18n="nav.contact">Contact</a></li>
@@ -49,18 +49,26 @@
 
 <main>
 
-  <section id="top" class="hero">
-    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Economics · Political Science &amp; Public Administration</p>
-    <h1 class="hero-name">
-      <span class="hero-first">AYBERK</span>
-      <span class="hero-last">CEYRAN</span>
-    </h1>
-    <p class="hero-tagline">
-      <span class="hero-quote-text" data-i18n="hero.quoteText">&ldquo;Freedom and independence are my character.&rdquo;</span>
-      <br>
-      <span class="hero-quote-author" data-i18n="hero.quoteAuthor">&mdash; Mustafa Kemal Atat&uuml;rk</span>
-    </p>
-    <div class="hero-divider" aria-hidden="true"></div>
+  <section id="hakkimda" class="section">
+    <div class="about-intro">
+      <span class="section-index" data-i18n="about.sectionLabel">About</span>
+      <h2 class="about-name" data-i18n="about.heading">Ayberk Ceyran</h2>
+    </div>
+    <div class="section-body about-grid">
+      <div class="about-text">
+        <p data-i18n="about.paragraph1">I was born in 2007. I'm interested in economics, software, data analysis, and artificial intelligence, and I keep working to develop myself in these areas &mdash; particularly in Python, web development, and data science. I'm also preparing for the SAT and aiming to study economics in Canada.</p>
+        <p data-i18n="about.paragraph2">I created this website to share my projects, research, articles, and the work I'll keep developing over time. While documenting my own learning process, I hope the content I produce can also be useful to others.</p>
+        <p data-i18n="about.paragraph3">In the long run, I aim to develop projects that bring technology and economics together, pursue academic work, and contribute to the production of knowledge.</p>
+        <p data-i18n="about.paragraph4">The most important figure who has inspired me throughout my life is Gazi Mustafa Kemal Atat&uuml;rk, the founder of our Republic. The importance he placed on science, reason, freedom, and modernization is among the core values I hold as well.</p>
+        <p data-i18n="about.paragraph5">Thank you for visiting my website.</p>
+      </div>
+      <div>
+        <div class="about-portrait">
+          <img src="/ataturk.jpg" alt="Mustafa Kemal Atatürk" loading="lazy">
+        </div>
+        <p class="about-portrait-caption">Gazi Mustafa Kemal Atat&uuml;rk</p>
+      </div>
+    </div>
   </section>
 
 </main>
