@@ -1,1 +1,11 @@
-www.ayberkceyran.com
+<svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg">
+<rect width="60" height="36" fill="#00247D"/>
+<line x1="0" y1="0" x2="60" y2="36" stroke="#ffffff" stroke-width="9"/>
+<line x1="60" y1="0" x2="0" y2="36" stroke="#ffffff" stroke-width="9"/>
+<line x1="0" y1="0" x2="60" y2="36" stroke="#CF142B" stroke-width="4"/>
+<line x1="60" y1="0" x2="0" y2="36" stroke="#CF142B" stroke-width="4"/>
+<rect x="24" y="0" width="12" height="36" fill="#ffffff"/>
+<rect x="0" y="13" width="60" height="10" fill="#ffffff"/>
+<rect x="27" y="0" width="6" height="36" fill="#CF142B"/>
+<rect x="0" y="15" width="60" height="6" fill="#CF142B"/>
+</svg>

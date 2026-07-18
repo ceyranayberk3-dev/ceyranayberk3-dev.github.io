@@ -114,7 +114,65 @@ img{ max-width: 100%; display: block; }
   color: var(--color-ink);
   position: relative;
   padding-bottom: 0.3rem;
+  padding-left: 1.9rem;
   transition: color 0.25s ease;
+}
+
+/* Sekme simgeleri — alan temasını (ekonomi/siyaset/akademi) çağrıştıran,
+   dinlenme halinde belirgin altın tonda; üzerine gelince şeffaf bir
+   silüete dönüşen küçük ikonlar. */
+.main-nav a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-gold-dark);
+  opacity: 0.62;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.main-nav a:hover::before,
+.main-nav a:focus-visible::before{
+  opacity: 0.16;
+}
+
+.main-nav li:nth-child(1) a::before{
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12.0,2.5 14.2,8.9 21.0,9.1 15.6,13.2 17.6,19.7 12.0,15.8 6.4,19.7 8.4,13.2 3.0,9.1 9.8,8.9'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12.0,2.5 14.2,8.9 21.0,9.1 15.6,13.2 17.6,19.7 12.0,15.8 6.4,19.7 8.4,13.2 3.0,9.1 9.8,8.9'/></svg>");
+}
+
+.main-nav li:nth-child(2) a::before{
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,4 22,9 12,14 2,9'/><rect x='9' y='13' width='6' height='5'/><circle cx='14.2' cy='19.4' r='1.15'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,4 22,9 12,14 2,9'/><rect x='9' y='13' width='6' height='5'/><circle cx='14.2' cy='19.4' r='1.15'/></svg>");
+}
+
+.main-nav li:nth-child(3) a::before{
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='14' width='4.2' height='7'/><rect x='9.9' y='9' width='4.2' height='12'/><rect x='16.8' y='4' width='4.2' height='17'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='14' width='4.2' height='7'/><rect x='9.9' y='9' width='4.2' height='12'/><rect x='16.8' y='4' width='4.2' height='17'/></svg>");
+}
+
+.main-nav li:nth-child(4) a::before{
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M5,3 H19 V21 H5 Z M7.2,8 H16.8 V9.6 H7.2 Z M7.2,12 H16.8 V13.6 H7.2 Z M7.2,16 H13.5 V17.6 H7.2 Z'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M5,3 H19 V21 H5 Z M7.2,8 H16.8 V9.6 H7.2 Z M7.2,12 H16.8 V13.6 H7.2 Z M7.2,16 H13.5 V17.6 H7.2 Z'/></svg>");
+}
+
+.main-nav li:nth-child(5) a::before{
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M3,6 H21 V19 H3 Z M3,6 L12,13.5 L21,6 L21,7.6 L12,15.4 L3,7.6 Z'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' d='M3,6 H21 V19 H3 Z M3,6 L12,13.5 L21,6 L21,7.6 L12,15.4 L3,7.6 Z'/></svg>");
+}
+
+@media (max-width: 720px){
+  .main-nav a::before{ left: clamp(1.5rem, 5vw, 4rem); }
 }
 
 .main-nav a::after{
@@ -169,7 +227,7 @@ img{ max-width: 100%; display: block; }
   .main-nav ul.open{ max-height: 320px; }
   .main-nav a{
     display: block;
-    padding: 1rem clamp(1.5rem, 5vw, 4rem);
+    padding: 1rem clamp(1.5rem, 5vw, 4rem) 1rem calc(clamp(1.5rem, 5vw, 4rem) + 1.7rem);
     border-top: 1px solid var(--color-rule);
   }
 }
