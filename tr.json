@@ -9,21 +9,25 @@
     "langSwitchAriaLabel": "Dil seçici"
   },
   "nav": {
+    "home": "Ana Sayfa",
     "about": "Hakkımda",
     "projects": "Projeler",
     "blog": "Blog / Makale",
     "contact": "İletişim"
   },
   "hero": {
-    "eyebrow": "Siyaset · Toplum · Gelecek",
-    "tagline": "Şeffaf yönetim ve ortak akıl için sade bir çizgi."
+    "eyebrow": "Ekonomi · Siyaset Bilimi ve Kamu Yönetimi",
+    "quoteText": "“Hürriyet ve istiklal benim karakterimdir.”",
+    "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
   "about": {
     "sectionLabel": "Hakkımda",
-    "heading": "Hakkımda",
-    "paragraph1": "Kamu hizmetine, sahada dinlemekten öğrenilen sorularla başladım. Yıllar içinde edindiğim tecrübe, bana tek bir şeyi net biçimde gösterdi: iyi yönetim, büyük vaatlerden değil, sürdürülebilir ve hesap verebilir küçük adımlardan doğar.",
-    "paragraph2": "Bugün buradaki amacım, aldığım her kararı sizinle paylaşmak, çalışmalarımı takip edilebilir kılmak ve kapımı her zaman açık tutmaktır.",
-    "quote": "“Siyaset, konuşulanla değil yapılanla ölçülür.”",
+    "heading": "Ayberk Ceyran",
+    "paragraph1": "2007 doğumluyum. Ekonomi, yazılım, veri analizi ve yapay zekâ alanlarına ilgi duyuyor; bu alanlarda kendimi sürekli geliştirmeye çalışıyorum. Özellikle Python, web geliştirme ve veri bilimi alanlarında kendimi geliştirmeye çalışıyorum. Aynı zamanda SAT sınavına hazırlanıyor ve Kanada'da ekonomi eğitimi almayı hedefliyorum.",
+    "paragraph2": "Bu web sitesini; projelerimi, araştırmalarımı, makalelerimi ve zaman içinde geliştireceğim çalışmaları paylaşmak amacıyla oluşturdum. Öğrenme sürecimi kayıt altına alırken, ürettiğim içeriklerin başkalarına da fayda sağlamasını amaçlıyorum.",
+    "paragraph3": "Uzun vadede teknoloji ile ekonomiyi bir araya getiren projeler geliştirmeyi, akademik çalışmalar yapmayı ve bilgi üretimine katkıda bulunmayı hedefliyorum.",
+    "paragraph4": "Hayatım boyunca bana ilham veren en önemli isim, Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk'tür. Bilime, akla, özgürlüğe ve çağdaşlaşmaya verdiği önem; benim de benimsediğim temel değerler arasında yer almaktadır.",
+    "paragraph5": "Web sitemi ziyaret ettiğiniz için teşekkür ederim.",
     "factBirthplace": "Doğum Yeri",
     "factEducation": "Eğitim",
     "factField": "Alan",

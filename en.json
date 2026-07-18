@@ -9,21 +9,25 @@
     "langSwitchAriaLabel": "Language selector"
   },
   "nav": {
+    "home": "Home",
     "about": "About",
     "projects": "Projects",
     "blog": "Blog / Articles",
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Politics · Society · Future",
-    "tagline": "A simple line for transparent governance and common sense."
+    "eyebrow": "Economics · Political Science & Public Administration",
+    "quoteText": "“Freedom and independence are my character.”",
+    "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
   "about": {
     "sectionLabel": "About",
-    "heading": "About",
-    "paragraph1": "I began public service with questions learned by listening in the field. The experience I've gained over the years has shown me one thing clearly: good governance is born not from grand promises, but from sustainable, accountable small steps.",
-    "paragraph2": "My purpose here today is to share every decision I make with you, to keep my work traceable, and to always keep my door open.",
-    "quote": "“Politics is measured not by what is said, but by what is done.”",
+    "heading": "Ayberk Ceyran",
+    "paragraph1": "I was born in 2007. I'm interested in economics, software, data analysis, and artificial intelligence, and I keep working to develop myself in these areas — particularly in Python, web development, and data science. I'm also preparing for the SAT and aiming to study economics in Canada.",
+    "paragraph2": "I created this website to share my projects, research, articles, and the work I'll keep developing over time. While documenting my own learning process, I hope the content I produce can also be useful to others.",
+    "paragraph3": "In the long run, I aim to develop projects that bring technology and economics together, pursue academic work, and contribute to the production of knowledge.",
+    "paragraph4": "The most important figure who has inspired me throughout my life is Gazi Mustafa Kemal Atatürk, the founder of our Republic. The importance he placed on science, reason, freedom, and modernization is among the core values I hold as well.",
+    "paragraph5": "Thank you for visiting my website.",
     "factBirthplace": "Birthplace",
     "factEducation": "Education",
     "factField": "Field",

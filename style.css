@@ -9,6 +9,7 @@
   --color-bg-alt:     #F3F1EC;  /* Bölüm ayrımı için hafif ton */
   --color-gold:       #D4AF37;  /* Metallic Gold — CEYRAN */
   --color-gold-soft:  #C5A059;  /* Alternatif / dijital altın */
+  --color-tr-red:     #E30A17;  /* Al bayrak kırmızısı — alıntı vurgusu */
   --color-ink:        #1A1A1A; /* Soft Black — gövde metni */
   --color-ink-muted:  #55524B; /* İkincil metin */
   --color-rule:       #E4E0D6; /* İnce ayraç çizgileri */
@@ -128,6 +129,13 @@ img{ max-width: 100%; display: block; }
 }
 .main-nav a:hover::after,
 .main-nav a:focus-visible::after{
+  width: 100%;
+}
+
+.main-nav a.is-current{
+  color: var(--color-gold-soft);
+}
+.main-nav a.is-current::after{
   width: 100%;
 }
 
@@ -256,8 +264,19 @@ img{ max-width: 100%; display: block; }
 .hero-tagline{
   margin-top: 1.8rem;
   font-style: italic;
-  color: var(--color-ink-muted);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.hero-quote-text{
+  color: var(--color-tr-red);
+}
+
+.hero-quote-author{
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: var(--color-ink);
+  font-size: 0.95rem;
 }
 
 .hero-divider{
@@ -305,6 +324,14 @@ img{ max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3.5rem;
+}
+
+.about-name{
+  color: var(--color-gold);
+}
+
+.about-text p + p{
+  margin-top: 1.6rem;
 }
 
 .about-text blockquote{
