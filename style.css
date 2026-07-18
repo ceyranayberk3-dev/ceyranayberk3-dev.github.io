@@ -520,8 +520,7 @@ img{ max-width: 100%; display: block; }
 .signature-svg{
   color: var(--color-gold-soft);
   clip-path: inset(0 100% 0 0);
-  animation: sigReveal 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  animation-delay: 0.15s;
+  animation: sigReveal 4.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -547,8 +546,11 @@ button:focus-visible{
   *{ transition: none !important; }
 }
 
-/* İmza — açılış (reveal) animasyonu */
+/* İmza — sürekli tekrarlanan açılış/kapanış animasyonu */
 @keyframes sigReveal {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
+  0%   { clip-path: inset(0 100% 0 0); }
+  22%  { clip-path: inset(0 0 0 0); }
+  75%  { clip-path: inset(0 0 0 0); }
+  92%  { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
 }
