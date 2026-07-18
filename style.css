@@ -93,9 +93,9 @@ img{ max-width: 100%; display: block; }
 }
 
 .brand-mark img{
-  width: 96px !important;
-  height: 96px !important;
-  max-width: 96px !important;
+  width: auto;
+  height: clamp(52px, 6vw, 68px);
+  max-width: 220px;
   display: block;
   object-fit: contain;
 }
