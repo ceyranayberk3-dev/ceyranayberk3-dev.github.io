@@ -9,7 +9,6 @@
   --color-bg-alt:     #F3F1EC;  /* Bölüm ayrımı için hafif ton */
   --color-gold:       #D4AF37;  /* Metallic Gold — CEYRAN */
   --color-gold-soft:  #C5A059;  /* Alternatif / dijital altın */
-  --color-tr-red:     #E30A17;  /* Al bayrak kırmızısı — alıntı vurgusu */
   --color-ink:        #1A1A1A; /* Soft Black — gövde metni */
   --color-ink-muted:  #55524B; /* İkincil metin */
   --color-rule:       #E4E0D6; /* İnce ayraç çizgileri */
@@ -129,13 +128,6 @@ img{ max-width: 100%; display: block; }
 }
 .main-nav a:hover::after,
 .main-nav a:focus-visible::after{
-  width: 100%;
-}
-
-.main-nav a.is-current{
-  color: var(--color-gold-soft);
-}
-.main-nav a.is-current::after{
   width: 100%;
 }
 
@@ -264,19 +256,8 @@ img{ max-width: 100%; display: block; }
 .hero-tagline{
   margin-top: 1.8rem;
   font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-.hero-quote-text{
-  color: var(--color-tr-red);
-}
-
-.hero-quote-author{
-  display: inline-block;
-  margin-top: 0.4rem;
-  color: var(--color-ink);
-  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  font-size: 1.05rem;
 }
 
 .hero-divider{
@@ -324,14 +305,6 @@ img{ max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3.5rem;
-}
-
-.about-name{
-  color: var(--color-gold);
-}
-
-.about-text p + p{
-  margin-top: 1.6rem;
 }
 
 .about-text blockquote{
@@ -539,14 +512,23 @@ img{ max-width: 100%; display: block; }
 }
 
 .site-signature svg{
-  width: clamp(180px, 30vw, 260px);
+  width: clamp(200px, 32vw, 320px);
   height: auto;
   display: block;
 }
 
+.signature-svg{
+  color: var(--color-gold-soft);
+  clip-path: inset(0 100% 0 0);
+  animation: sigReveal 4.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
 
-
-
+@media (prefers-reduced-motion: reduce){
+  .signature-svg{
+    animation: none;
+    clip-path: inset(0 0 0 0);
+  }
+}
 
 
 
@@ -564,51 +546,11 @@ button:focus-visible{
   *{ transition: none !important; }
 }
 
-/* İmza — kalem hareketleri (görselden otomatik izlenmiş, sonsuz döngü) */
-.sig-stroke {
-  fill: none;
-  stroke: var(--color-gold-soft);
-  stroke-width: 3.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation-duration: 7.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sig-stroke {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes sigDraw0 {
-  0% { stroke-dashoffset: 1; }
-  0.0% { stroke-dashoffset: 1; }
-  21.2% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 0; }
-}
-
-@keyframes sigDraw1 {
-  0% { stroke-dashoffset: 1; }
-  21.2% { stroke-dashoffset: 1; }
-  41.0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 0; }
-}
-
-@keyframes sigDraw2 {
-  0% { stroke-dashoffset: 1; }
-  41.0% { stroke-dashoffset: 1; }
-  75.8% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 0; }
-}
-
-@keyframes sigDraw3 {
-  0% { stroke-dashoffset: 1; }
-  75.8% { stroke-dashoffset: 1; }
-  78.0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 0; }
+/* İmza — sürekli tekrarlanan açılış/kapanış animasyonu */
+@keyframes sigReveal {
+  0%   { clip-path: inset(0 100% 0 0); }
+  22%  { clip-path: inset(0 0 0 0); }
+  75%  { clip-path: inset(0 0 0 0); }
+  92%  { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
 }
