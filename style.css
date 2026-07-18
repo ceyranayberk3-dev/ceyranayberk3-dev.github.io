@@ -12,6 +12,9 @@
   --color-ink:        #1A1A1A; /* Soft Black — gövde metni */
   --color-ink-muted:  #55524B; /* İkincil metin */
   --color-rule:       #E4E0D6; /* İnce ayraç çizgileri */
+  --color-red-accent: #C8102E; /* Türk bayrağı kırmızısı — vurgu */
+  --color-flag-red:   #C8102E;
+  --color-flag-red-deep: #A50D26;
 
   /* Tipografi */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -225,7 +228,7 @@ img{ max-width: 100%; display: block; }
 }
 
 .hero-eyebrow{
-  font-size: 0.78rem;
+  font-size: 1.05rem;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--color-ink-muted);
@@ -239,9 +242,11 @@ img{ max-width: 100%; display: block; }
 }
 
 .hero-first{
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 400;
-  font-style: italic;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--color-ink);
 }
 
@@ -255,9 +260,22 @@ img{ max-width: 100%; display: block; }
 
 .hero-tagline{
   margin-top: 1.8rem;
-  font-style: italic;
   color: var(--color-ink-muted);
   font-size: 1.05rem;
+}
+
+.hero-quote-text{
+  display: inline-block;
+  font-style: italic;
+  color: var(--color-red-accent);
+}
+
+.hero-quote-author{
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-ink-muted);
 }
 
 .hero-divider{
@@ -295,6 +313,28 @@ img{ max-width: 100%; display: block; }
   font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
+/* Hakkımda sayfası — başlık en öne, ortalanmış ve büyük */
+.about-intro{
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.about-intro .section-index{
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  margin-bottom: 0.9rem;
+}
+
+.about-intro .about-name{
+  font-size: clamp(2.1rem, 4.6vw, 3.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .section-body p{
   max-width: var(--measure);
   color: var(--color-ink);
@@ -317,23 +357,50 @@ img{ max-width: 100%; display: block; }
   color: var(--color-ink);
 }
 
-.about-facts dl div{
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-rule);
+/* Atatürk portresi — bayrak renginde, sitenin altın/fildişi paletiyle uyumlu çerçeve */
+.about-portrait{
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 2px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--color-flag-red) 0%, var(--color-flag-red-deep) 100%);
+  box-shadow: 0 1px 0 var(--color-rule), inset 0 0 0 1px rgba(212, 175, 55, 0.55);
 }
-.about-facts dl div:last-child{ border-bottom: 1px solid var(--color-rule); }
 
-.about-facts dt{
-  font-size: 0.75rem;
+.about-portrait img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: grayscale(0.35) contrast(1.08) saturate(1.05);
+  mix-blend-mode: luminosity;
+  opacity: 0.96;
+}
+
+.about-portrait::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(200,16,46,0.06) 0%, rgba(165,13,38,0.28) 100%);
+  pointer-events: none;
+}
+
+.about-portrait::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px var(--color-gold);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-portrait-caption{
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
   letter-spacing: var(--tracking-mid);
   text-transform: uppercase;
   color: var(--color-ink-muted);
-  margin-bottom: 0.3rem;
-}
-.about-facts dd{
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
+  text-align: center;
 }
 
 @media (max-width: 780px){
@@ -515,18 +582,60 @@ img{ max-width: 100%; display: block; }
   width: clamp(200px, 32vw, 320px);
   height: auto;
   display: block;
+  overflow: visible;
 }
 
-.signature-svg{
-  color: var(--color-gold-soft);
-  clip-path: inset(0 100% 0 0);
-  animation: sigReveal 4.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+/* İmza, kalemle yazılıyormuş gibi çizilip sonra silinir; sonsuz döngü */
+.sig-stroke{
+  fill: none;
+  stroke: var(--color-gold-soft);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation-duration: 6.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes sigDraw0{
+  0%   { stroke-dashoffset: 1; }
+  20%  { stroke-dashoffset: 0; }
+  58%  { stroke-dashoffset: 0; }
+  82%  { stroke-dashoffset: -1; }
+  100% { stroke-dashoffset: -1; }
+}
+@keyframes sigDraw1{
+  0%   { stroke-dashoffset: 1; }
+  9%   { stroke-dashoffset: 1; }
+  32%  { stroke-dashoffset: 0; }
+  58%  { stroke-dashoffset: 0; }
+  82%  { stroke-dashoffset: -1; }
+  100% { stroke-dashoffset: -1; }
+}
+@keyframes sigDraw2{
+  0%   { stroke-dashoffset: 1; }
+  17%  { stroke-dashoffset: 1; }
+  42%  { stroke-dashoffset: 0; }
+  58%  { stroke-dashoffset: 0; }
+  82%  { stroke-dashoffset: -1; }
+  100% { stroke-dashoffset: -1; }
+}
+@keyframes sigDraw3{
+  0%   { stroke-dashoffset: 1; }
+  25%  { stroke-dashoffset: 1; }
+  48%  { stroke-dashoffset: 0; }
+  58%  { stroke-dashoffset: 0; }
+  82%  { stroke-dashoffset: -1; }
+  100% { stroke-dashoffset: -1; }
 }
 
 @media (prefers-reduced-motion: reduce){
-  .signature-svg{
+  .sig-stroke{
     animation: none;
-    clip-path: inset(0 0 0 0);
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -544,13 +653,4 @@ button:focus-visible{
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *{ transition: none !important; }
-}
-
-/* İmza — sürekli tekrarlanan açılış/kapanış animasyonu */
-@keyframes sigReveal {
-  0%   { clip-path: inset(0 100% 0 0); }
-  22%  { clip-path: inset(0 0 0 0); }
-  75%  { clip-path: inset(0 0 0 0); }
-  92%  { clip-path: inset(0 100% 0 0); }
-  100% { clip-path: inset(0 100% 0 0); }
 }

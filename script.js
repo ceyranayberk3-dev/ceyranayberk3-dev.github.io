@@ -48,7 +48,7 @@ function resolveKey(dict, path) {
 async function loadTranslations() {
   const entries = await Promise.all(
     SUPPORTED_LANGS.map(async (lang) => {
-      const res = await fetch(`i18n/${lang}.json`);
+      const res = await fetch(`${lang}.json`);
       if (!res.ok) throw new Error(`Çeviri dosyası yüklenemedi: ${lang}.json`);
       return [lang, await res.json()];
     })
