@@ -169,6 +169,48 @@ img{ max-width: 100%; display: block; }
   }
 }
 
+/* Sağ üst grup: navigasyon + dil seçici */
+.header-actions{
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.lang-switch{
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.lang-btn{
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-mid);
+  color: var(--color-ink-muted);
+  background: none;
+  border: none;
+  padding: 0.3rem 0.15rem;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible{
+  color: var(--color-ink);
+}
+
+.lang-btn.is-active{
+  color: var(--color-gold-soft);
+  font-weight: 600;
+}
+
+.lang-sep{
+  color: var(--color-rule);
+  font-size: 0.78rem;
+}
+
 /* ---------------------------------------------------------------
    Hero
 --------------------------------------------------------------- */

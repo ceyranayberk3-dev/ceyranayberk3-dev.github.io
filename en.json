@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Ayberk Ceyran",
+    "description": "Ayberk Ceyran — Official Website"
+  },
+  "header": {
+    "logoAlt": "Ayberk Ceyran logo",
+    "navAriaLabel": "Main menu",
+    "langSwitchAriaLabel": "Language selector"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog / Articles",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Politics · Society · Future",
+    "tagline": "A simple line for transparent governance and common sense."
+  },
+  "about": {
+    "sectionLabel": "About",
+    "heading": "About",
+    "paragraph1": "I began public service with questions learned by listening in the field. The experience I've gained over the years has shown me one thing clearly: good governance is born not from grand promises, but from sustainable, accountable small steps.",
+    "paragraph2": "My purpose here today is to share every decision I make with you, to keep my work traceable, and to always keep my door open.",
+    "quote": "“Politics is measured not by what is said, but by what is done.”",
+    "factBirthplace": "Birthplace",
+    "factEducation": "Education",
+    "factField": "Field",
+    "factFieldValue": "Public Policy"
+  },
+  "projects": {
+    "sectionLabel": "Projects",
+    "heading": "Projects",
+    "items": [
+      {
+        "title": "Open Budget Initiative",
+        "description": "A project making public spending visible to everyone through plain-language, regular reports."
+      },
+      {
+        "title": "Neighborhood Councils",
+        "description": "A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice."
+      },
+      {
+        "title": "Youth Policy Workshop",
+        "description": "An education and mentorship program aiming to make young people founding partners in politics, not just spectators."
+      }
+    ]
+  },
+  "blog": {
+    "sectionLabel": "Blog / Articles",
+    "heading": "Blog / Articles",
+    "posts": [
+      {
+        "date": "July 14, 2026",
+        "title": "Why Local Transparency Can Also Work at the National Scale",
+        "description": "A short assessment of how opening up budget data helps rebuild trust."
+      },
+      {
+        "date": "June 2, 2026",
+        "title": "Listening Is a Form of Governance",
+        "description": "Notes and lessons from the first six months of the neighborhood councils."
+      },
+      {
+        "date": "April 18, 2026",
+        "title": "Politics Built With Young People",
+        "description": "Observations from the first term of the Youth Policy Workshop."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading": "Contact",
+    "intro": "You can reach me for feedback, suggestions, and collaboration requests.",
+    "formAriaLabel": "Contact form",
+    "labelEmail": "Email",
+    "labelInstagram": "Instagram",
+    "labelX": "X",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Your Message",
+      "submit": "Send",
+      "note": "This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

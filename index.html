@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayberk Ceyran</title>
-<meta name="description" content="Ayberk Ceyran — Resmî Web Sitesi">
+<title data-i18n="meta.title">Ayberk Ceyran</title>
+<meta name="description" content="Ayberk Ceyran — Official Website" data-i18n-content="meta.description">
 
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -22,49 +22,58 @@
 
 <header class="site-header">
   <a href="#top" class="brand-mark">
-    <img src="logo.png" alt="Ayberk Ceyran logosu">
+    <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
   </a>
-  <nav class="main-nav" aria-label="Ana menü">
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-      <span></span><span></span><span></span>
-    </button>
-    <ul id="nav-list">
-      <li><a href="#hakkimda">Hakkımda</a></li>
-      <li><a href="#projeler">Projeler</a></li>
-      <li><a href="#blog">Blog / Makale</a></li>
-      <li><a href="#iletisim">İletişim</a></li>
-    </ul>
-  </nav>
+
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-list">
+        <li><a href="#hakkimda" data-i18n="nav.about">About</a></li>
+        <li><a href="#projeler" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#blog" data-i18n="nav.blog">Blog / Articles</a></li>
+        <li><a href="#iletisim" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
+      <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    </div>
+  </div>
 </header>
 
 <main>
 
   <section id="top" class="hero">
-    <p class="hero-eyebrow">Siyaset · Toplum · Gelecek</p>
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Politics · Society · Future</p>
     <h1 class="hero-name">
       <span class="hero-first">Ayberk</span>
       <span class="hero-last">CEYRAN</span>
     </h1>
-    <p class="hero-tagline">Şeffaf yönetim ve ortak akıl için sade bir çizgi.</p>
+    <p class="hero-tagline" data-i18n="hero.tagline">A simple line for transparent governance and common sense.</p>
     <div class="hero-divider" aria-hidden="true"></div>
   </section>
 
   <section id="hakkimda" class="section">
     <div class="section-head">
-      <span class="section-index">Hakkımda</span>
-      <h2>Hakkımda</h2>
+      <span class="section-index" data-i18n="about.sectionLabel">About</span>
+      <h2 data-i18n="about.heading">About</h2>
     </div>
     <div class="section-body about-grid">
       <div class="about-text">
-        <p>Kamu hizmetine, sahada dinlemekten öğrenilen sorularla başladım. Yıllar içinde edindiğim tecrübe, bana tek bir şeyi net biçimde gösterdi: iyi yönetim, büyük vaatlerden değil, sürdürülebilir ve hesap verebilir küçük adımlardan doğar.</p>
-        <p>Bugün buradaki amacım, aldığım her kararı sizinle paylaşmak, çalışmalarımı takip edilebilir kılmak ve kapımı her zaman açık tutmaktır.</p>
-        <blockquote>“Siyaset, konuşulanla değil yapılanla ölçülür.”</blockquote>
+        <p data-i18n="about.paragraph1">I began public service with questions learned by listening in the field. The experience I've gained over the years has shown me one thing clearly: good governance is born not from grand promises, but from sustainable, accountable small steps.</p>
+        <p data-i18n="about.paragraph2">My purpose here today is to share every decision I make with you, to keep my work traceable, and to always keep my door open.</p>
+        <blockquote data-i18n="about.quote">“Politics is measured not by what is said, but by what is done.”</blockquote>
       </div>
       <div class="about-facts">
         <dl>
-          <div><dt>Doğum Yeri</dt><dd>—</dd></div>
-          <div><dt>Eğitim</dt><dd>—</dd></div>
-          <div><dt>Alan</dt><dd>Kamu Politikaları</dd></div>
+          <div><dt data-i18n="about.factBirthplace">Birthplace</dt><dd>—</dd></div>
+          <div><dt data-i18n="about.factEducation">Education</dt><dd>—</dd></div>
+          <div><dt data-i18n="about.factField">Field</dt><dd data-i18n="about.factFieldValue">Public Policy</dd></div>
         </dl>
       </div>
     </div>
@@ -72,75 +81,75 @@
 
   <section id="projeler" class="section">
     <div class="section-head">
-      <span class="section-index">Projeler</span>
-      <h2>Projeler</h2>
+      <span class="section-index" data-i18n="projects.sectionLabel">Projects</span>
+      <h2 data-i18n="projects.heading">Projects</h2>
     </div>
     <ul class="project-list">
       <li class="project-item">
-        <h3>Açık Bütçe İnisiyatifi</h3>
-        <p>Kamu kaynaklarının nereye harcandığını herkesin anlayabileceği bir dille, düzenli raporlarla görünür kılan çalışma.</p>
+        <h3 data-i18n="projects.items.0.title">Open Budget Initiative</h3>
+        <p data-i18n="projects.items.0.description">A project making public spending visible to everyone through plain-language, regular reports.</p>
       </li>
       <li class="project-item">
-        <h3>Mahalle Meclisleri</h3>
-        <p>Kararların masa başında değil, mahallede alındığı; sakinlerin doğrudan söz sahibi olduğu düzenli toplantı ağı.</p>
+        <h3 data-i18n="projects.items.1.title">Neighborhood Councils</h3>
+        <p data-i18n="projects.items.1.description">A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice.</p>
       </li>
       <li class="project-item">
-        <h3>Genç Politika Atölyesi</h3>
-        <p>Gençleri siyasetin izleyicisi değil, kurucu ortağı yapmayı amaçlayan eğitim ve mentorluk programı.</p>
+        <h3 data-i18n="projects.items.2.title">Youth Policy Workshop</h3>
+        <p data-i18n="projects.items.2.description">An education and mentorship program aiming to make young people founding partners in politics, not just spectators.</p>
       </li>
     </ul>
   </section>
 
   <section id="blog" class="section">
     <div class="section-head">
-      <span class="section-index">Blog / Makale</span>
-      <h2>Blog / Makale</h2>
+      <span class="section-index" data-i18n="blog.sectionLabel">Blog / Articles</span>
+      <h2 data-i18n="blog.heading">Blog / Articles</h2>
     </div>
     <ul class="post-list">
       <li class="post-item">
-        <span class="post-date">14 Temmuz 2026</span>
-        <h3><a href="#">Yerelde Şeffaflık Neden Ulusal Ölçekte de Mümkün?</a></h3>
-        <p>Bütçe verilerini açmanın, güveni yeniden inşa etmedeki payı üzerine kısa bir değerlendirme.</p>
+        <span class="post-date" data-i18n="blog.posts.0.date">July 14, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.0.title">Why Local Transparency Can Also Work at the National Scale</a></h3>
+        <p data-i18n="blog.posts.0.description">A short assessment of how opening up budget data helps rebuild trust.</p>
       </li>
       <li class="post-item">
-        <span class="post-date">2 Haziran 2026</span>
-        <h3><a href="#">Dinlemek Bir Yönetim Biçimidir</a></h3>
-        <p>Mahalle meclislerinin ilk altı ayından notlar ve öğrendiklerimiz.</p>
+        <span class="post-date" data-i18n="blog.posts.1.date">June 2, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.1.title">Listening Is a Form of Governance</a></h3>
+        <p data-i18n="blog.posts.1.description">Notes and lessons from the first six months of the neighborhood councils.</p>
       </li>
       <li class="post-item">
-        <span class="post-date">18 Nisan 2026</span>
-        <h3><a href="#">Gençlerle Kurulan Siyaset</a></h3>
-        <p>Genç Politika Atölyesi'nin ilk dönemine dair gözlemler.</p>
+        <span class="post-date" data-i18n="blog.posts.2.date">April 18, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.2.title">Politics Built With Young People</a></h3>
+        <p data-i18n="blog.posts.2.description">Observations from the first term of the Youth Policy Workshop.</p>
       </li>
     </ul>
   </section>
 
   <section id="iletisim" class="section">
     <div class="section-head">
-      <span class="section-index">İletişim</span>
-      <h2>İletişim</h2>
+      <span class="section-index" data-i18n="contact.sectionLabel">Contact</span>
+      <h2 data-i18n="contact.heading">Contact</h2>
     </div>
     <div class="section-body contact-grid">
       <div class="contact-info">
-        <p>Görüş, öneri ve iş birliği talepleriniz için bana ulaşabilirsiniz.</p>
+        <p data-i18n="contact.intro">You can reach me for feedback, suggestions, and collaboration requests.</p>
         <ul class="contact-list">
-          <li><span>E-posta</span><a href="mailto:iletisim@ayberkceyran.com">iletisim@ayberkceyran.com</a></li>
-          <li><span>Instagram</span><a href="#">@ayberkceyran</a></li>
-          <li><span>X</span><a href="#">@ayberkceyran</a></li>
+          <li><span data-i18n="contact.labelEmail">Email</span><a href="mailto:iletisim@ayberkceyran.com">iletisim@ayberkceyran.com</a></li>
+          <li><span data-i18n="contact.labelInstagram">Instagram</span><a href="#">@ayberkceyran</a></li>
+          <li><span data-i18n="contact.labelX">X</span><a href="#">@ayberkceyran</a></li>
         </ul>
       </div>
-      <form class="contact-form" aria-label="İletişim formu">
-        <label for="name">Ad Soyad</label>
+      <form class="contact-form" aria-label="Contact form" data-i18n-aria-label="contact.formAriaLabel">
+        <label for="name" data-i18n="contact.form.name">Full Name</label>
         <input type="text" id="name" name="name" autocomplete="name" required>
 
-        <label for="email">E-posta</label>
+        <label for="email" data-i18n="contact.form.email">Email</label>
         <input type="email" id="email" name="email" autocomplete="email" required>
 
-        <label for="message">Mesajınız</label>
+        <label for="message" data-i18n="contact.form.message">Your Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Gönder</button>
-        <p class="form-note">Form şu an statik olarak hazırlanmıştır; gönderim için bir servis (Formspree, Netlify Forms vb.) bağlanmalıdır.</p>
+        <button type="submit" data-i18n="contact.form.submit">Send</button>
+        <p class="form-note" data-i18n="contact.form.note">This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions.</p>
       </form>
     </div>
   </section>
@@ -158,7 +167,7 @@
 </div>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Ayberk Ceyran. Tüm hakları saklıdır.</p>
+  <p>© <span id="year"></span> Ayberk Ceyran. <span data-i18n="footer.rights">All rights reserved.</span></p>
 </footer>
 
 <script src="script.js"></script>

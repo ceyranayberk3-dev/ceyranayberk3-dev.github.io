@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Ayberk Ceyran",
+    "description": "Ayberk Ceyran — Resmî Web Sitesi"
+  },
+  "header": {
+    "logoAlt": "Ayberk Ceyran logosu",
+    "navAriaLabel": "Ana menü",
+    "langSwitchAriaLabel": "Dil seçici"
+  },
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "blog": "Blog / Makale",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "eyebrow": "Siyaset · Toplum · Gelecek",
+    "tagline": "Şeffaf yönetim ve ortak akıl için sade bir çizgi."
+  },
+  "about": {
+    "sectionLabel": "Hakkımda",
+    "heading": "Hakkımda",
+    "paragraph1": "Kamu hizmetine, sahada dinlemekten öğrenilen sorularla başladım. Yıllar içinde edindiğim tecrübe, bana tek bir şeyi net biçimde gösterdi: iyi yönetim, büyük vaatlerden değil, sürdürülebilir ve hesap verebilir küçük adımlardan doğar.",
+    "paragraph2": "Bugün buradaki amacım, aldığım her kararı sizinle paylaşmak, çalışmalarımı takip edilebilir kılmak ve kapımı her zaman açık tutmaktır.",
+    "quote": "“Siyaset, konuşulanla değil yapılanla ölçülür.”",
+    "factBirthplace": "Doğum Yeri",
+    "factEducation": "Eğitim",
+    "factField": "Alan",
+    "factFieldValue": "Kamu Politikaları"
+  },
+  "projects": {
+    "sectionLabel": "Projeler",
+    "heading": "Projeler",
+    "items": [
+      {
+        "title": "Açık Bütçe İnisiyatifi",
+        "description": "Kamu kaynaklarının nereye harcandığını herkesin anlayabileceği bir dille, düzenli raporlarla görünür kılan çalışma."
+      },
+      {
+        "title": "Mahalle Meclisleri",
+        "description": "Kararların masa başında değil, mahallede alındığı; sakinlerin doğrudan söz sahibi olduğu düzenli toplantı ağı."
+      },
+      {
+        "title": "Genç Politika Atölyesi",
+        "description": "Gençleri siyasetin izleyicisi değil, kurucu ortağı yapmayı amaçlayan eğitim ve mentorluk programı."
+      }
+    ]
+  },
+  "blog": {
+    "sectionLabel": "Blog / Makale",
+    "heading": "Blog / Makale",
+    "posts": [
+      {
+        "date": "14 Temmuz 2026",
+        "title": "Yerelde Şeffaflık Neden Ulusal Ölçekte de Mümkün?",
+        "description": "Bütçe verilerini açmanın, güveni yeniden inşa etmedeki payı üzerine kısa bir değerlendirme."
+      },
+      {
+        "date": "2 Haziran 2026",
+        "title": "Dinlemek Bir Yönetim Biçimidir",
+        "description": "Mahalle meclislerinin ilk altı ayından notlar ve öğrendiklerimiz."
+      },
+      {
+        "date": "18 Nisan 2026",
+        "title": "Gençlerle Kurulan Siyaset",
+        "description": "Genç Politika Atölyesi'nin ilk dönemine dair gözlemler."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "İletişim",
+    "heading": "İletişim",
+    "intro": "Görüş, öneri ve iş birliği talepleriniz için bana ulaşabilirsiniz.",
+    "formAriaLabel": "İletişim formu",
+    "labelEmail": "E-posta",
+    "labelInstagram": "Instagram",
+    "labelX": "X",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "message": "Mesajınız",
+      "submit": "Gönder",
+      "note": "Form şu an statik olarak hazırlanmıştır; gönderim için bir servis (Formspree, Netlify Forms vb.) bağlanmalıdır."
+    }
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}
