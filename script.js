@@ -201,14 +201,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobil navigasyon aç/kapa
+  // Navigasyon aç/kapa — masaüstünde varsayılan açık, tıklayınca kapanır/açılır; mobilde varsayılan kapalı, tıklayınca açılır/kapanır
   const toggle = document.querySelector('.menu-toggle');
   const navList = document.getElementById('nav-list');
 
   if (toggle && navList) {
     toggle.addEventListener('click', () => {
-      const isOpen = navList.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
+      navList.classList.toggle('open');
+      navList.classList.toggle('is-collapsed');
+      const isMobile = window.matchMedia('(max-width: 720px)').matches;
+      const isExpanded = isMobile
+        ? navList.classList.contains('open')
+        : !navList.classList.contains('is-collapsed');
+      toggle.setAttribute('aria-expanded', String(isExpanded));
     });
 
     navList.querySelectorAll('a').forEach(link => {

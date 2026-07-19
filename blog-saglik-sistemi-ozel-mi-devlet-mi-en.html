@@ -112,8 +112,13 @@
   var navList = document.getElementById('nav-list');
   if (toggle && navList) {
     toggle.addEventListener('click', function () {
-      var isOpen = navList.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
+      navList.classList.toggle('open');
+      navList.classList.toggle('is-collapsed');
+      var isMobile = window.matchMedia('(max-width: 720px)').matches;
+      var isExpanded = isMobile
+        ? navList.classList.contains('open')
+        : !navList.classList.contains('is-collapsed');
+      toggle.setAttribute('aria-expanded', String(isExpanded));
     });
   }
 
