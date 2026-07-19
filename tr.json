@@ -12,7 +12,9 @@
     "logoAlt": "Ayberk Ceyran logosu",
     "navAriaLabel": "Ana menü",
     "langSwitchAriaLabel": "Dil seçici",
+    "menuLabel": "MENÜ",
     "searchAriaLabel": "Ara",
+    "searchLabel": "ARA",
     "searchPlaceholder": "Makalelerde ara...",
     "searchNoResults": "Sonuç bulunamadı."
   },

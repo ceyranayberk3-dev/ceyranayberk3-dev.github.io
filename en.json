@@ -12,7 +12,9 @@
     "logoAlt": "Ayberk Ceyran logo",
     "navAriaLabel": "Main menu",
     "langSwitchAriaLabel": "Language selector",
+    "menuLabel": "MENU",
     "searchAriaLabel": "Search",
+    "searchLabel": "SEARCH",
     "searchPlaceholder": "Search articles...",
     "searchNoResults": "No results found."
   },

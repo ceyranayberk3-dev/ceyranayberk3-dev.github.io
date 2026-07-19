@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Mobil navigasyon aç/kapa
-  const toggle = document.querySelector('.nav-toggle');
+  const toggle = document.querySelector('.menu-toggle');
   const navList = document.getElementById('nav-list');
 
   if (toggle && navList) {

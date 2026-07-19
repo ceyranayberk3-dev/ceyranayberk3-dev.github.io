@@ -21,40 +21,46 @@
 <div class="rule-left" aria-hidden="true"></div>
 
 <header class="site-header">
-  <a href="index.html" class="brand-mark">
-    <img src="logo.png" alt="Ayberk Ceyran logo">
-  </a>
+  <div class="header-top">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <span class="menu-toggle-label">MENU</span>
+    </button>
 
-  <div class="header-actions">
-    <nav class="main-nav" aria-label="Main menu">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hakkimda.html">About</a></li>
-        <li><a href="projeler.html">Projects</a></li>
-        <li><a href="blog.html" class="is-current" aria-current="page">Blog / Articles</a></li>
-        <li><a href="iletisim.html">Contact</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="brand-mark">
+      <img src="logo.png" alt="Ayberk Ceyran logo">
+    </a>
 
-    <div class="lang-switch" role="group" aria-label="Language selector">
-      <span class="lang-btn is-active"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</span>
-    </div>
-    <div class="site-search">
-      <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
-      <div class="site-search-panel" id="site-search-panel">
-        <div class="site-search-field">
+    <div class="header-utilities">
+      <div class="site-search">
+        <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="site-search-input" placeholder="Search articles..." autocomplete="off">
+          <span class="site-search-label">SEARCH</span>
+        </button>
+        <div class="site-search-panel" id="site-search-panel">
+          <div class="site-search-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="site-search-input" placeholder="Search articles..." autocomplete="off">
+          </div>
+          <ul class="site-search-results" id="site-search-results"></ul>
         </div>
-        <ul class="site-search-results" id="site-search-results"></ul>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <span class="lang-btn is-active"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</span>
       </div>
     </div>
   </div>
+
+  <nav class="main-nav" aria-label="Main menu">
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hakkimda.html">About</a></li>
+      <li><a href="projeler.html">Projects</a></li>
+      <li><a href="blog.html" class="is-current" aria-current="page">Blog / Articles</a></li>
+      <li><a href="iletisim.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
@@ -100,7 +106,7 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  var toggle = document.querySelector('.nav-toggle');
+  var toggle = document.querySelector('.menu-toggle');
   var navList = document.getElementById('nav-list');
   if (toggle && navList) {
     toggle.addEventListener('click', function () {
