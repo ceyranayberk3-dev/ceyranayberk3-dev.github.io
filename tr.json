@@ -25,6 +25,14 @@
     "quoteText": "“Hürriyet ve istiklal benim karakterimdir.”",
     "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
+  "home": {
+    "teaser": {
+      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
+      "label": "Yeni Makale",
+      "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
+      "cta": "Şimdi Oku →"
+    }
+  },
   "about": {
     "sectionLabel": "Hakkımda",
     "heading": "Ayberk Ceyran",
@@ -41,6 +49,13 @@
   "projects": {
     "sectionLabel": "Projeler",
     "heading": "Projeler",
+    "searchPlaceholder": "Projelerde ara...",
+    "tabs": {
+      "all": "Tümü",
+      "policy": "Kamu Politikası",
+      "youth": "Gençlik"
+    },
+    "fabText": "İletişime Geç",
     "items": [
       {
         "title": "Açık Bütçe İnisiyatifi",
@@ -63,6 +78,7 @@
     "posts": [
       {
         "date": "19 Temmuz 2026",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
         "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
         "description": "Özel ve kamu sağlık modellerini; Amerika, Küba ve dünyada yedi yıldır birinci seçilen Tayvan'ın hibrit sistemi üzerinden karşılaştıran bir değerlendirme."
       }

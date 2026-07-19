@@ -25,6 +25,14 @@
     "quoteText": "“Freedom and independence are my character.”",
     "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
+  "home": {
+    "teaser": {
+      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
+      "label": "New Article",
+      "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
+      "cta": "Read Now →"
+    }
+  },
   "about": {
     "sectionLabel": "About",
     "heading": "Ayberk Ceyran",
@@ -41,6 +49,13 @@
   "projects": {
     "sectionLabel": "Projects",
     "heading": "Projects",
+    "searchPlaceholder": "Search projects...",
+    "tabs": {
+      "all": "All",
+      "policy": "Public Policy",
+      "youth": "Youth"
+    },
+    "fabText": "Get in Touch",
     "items": [
       {
         "title": "Open Budget Initiative",
@@ -63,8 +78,9 @@
     "posts": [
       {
         "date": "July 19, 2026",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
         "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
-        "description": "A comparison of private and public healthcare models — from the US and Cuba to Taiwan's hybrid system, ranked #1 in the world for seven years running. (Article available in Turkish.)"
+        "description": "A comparison of private and public healthcare models — from the US and Cuba to Taiwan's hybrid system, ranked #1 in the world for seven years running."
       }
     ]
   },

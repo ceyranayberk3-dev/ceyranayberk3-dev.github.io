@@ -15,7 +15,7 @@ const STORAGE_KEY = 'site-lang';
 // Metin dışında güncellenmesi gereken öznitelikler (attribute).
 // Yeni bir öznitelik türü gerekirse buraya eklemek yeterli
 // (örn. 'placeholder', 'title').
-const I18N_ATTRS = ['alt', 'aria-label', 'content'];
+const I18N_ATTRS = ['alt', 'aria-label', 'content', 'href', 'placeholder'];
 
 const translations = {};
 
@@ -131,4 +131,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initI18n();
+
+  // Projeler sayfası — sekme filtresi ve arama kutusu
+  const projectGrid = document.getElementById('project-grid');
+  if (projectGrid) {
+    const cards = Array.from(projectGrid.querySelectorAll('.project-card'));
+    const tabs = document.querySelectorAll('.project-tab');
+    const searchInput = document.getElementById('project-search-input');
+    let activeFilter = 'all';
+
+    function applyFilters() {
+      const query = (searchInput && searchInput.value || '').trim().toLowerCase();
+      cards.forEach((card) => {
+        const matchesFilter = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
+        const text = card.textContent.toLowerCase();
+        const matchesSearch = query === '' || text.includes(query);
+        card.classList.toggle('is-hidden', !(matchesFilter && matchesSearch));
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        activeFilter = tab.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+  }
 });
