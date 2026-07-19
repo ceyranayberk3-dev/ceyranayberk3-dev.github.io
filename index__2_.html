@@ -3,103 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.titleAbout">Ayberk Ceyran</title>
+<title data-i18n="meta.titleBlog">Ayberk Ceyran</title>
 <meta name="description" content="Ayberk Ceyran — Official Website" data-i18n-content="meta.description">
 
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <div class="rule-left" aria-hidden="true"></div>
 
-<div class="top-bar" data-i18n="header.topbar">Economics · Political Science &amp; Public Administration</div>
-
 <header class="site-header">
-  <div class="header-top">
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      <span class="menu-toggle-label" data-i18n="header.menuLabel">MENU</span>
-    </button>
+  <a href="/" class="brand-mark">
+    <img src="/logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
+  </a>
 
-    <a href="index.html" class="brand-mark">
-      <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
-    </a>
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-list">
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
+        <li><a href="/hakkimda/" data-i18n="nav.about">About</a></li>
+        <li><a href="/projeler/" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="/blog/" class="is-current" aria-current="page" data-i18n="nav.blog">Blog / Articles</a></li>
+        <li><a href="/iletisim/" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <div class="header-utilities">
-      <div class="site-search">
-        <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span class="site-search-label" data-i18n="header.searchLabel">SEARCH</span>
-        </button>
-        <div class="site-search-panel" id="site-search-panel">
-          <div class="site-search-field">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
-          </div>
-          <ul class="site-search-results" id="site-search-results"></ul>
-        </div>
-      </div>
-
-      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
-        <button type="button" class="lang-btn" data-lang="tr"><img class="flag-icon" src="flag-tr.svg" alt="" width="20" height="14">TR</button>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <button type="button" class="lang-btn" data-lang="en"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</button>
-      </div>
+    <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
+      <button type="button" class="lang-btn" data-lang="tr"><img class="flag-icon" src="/flag-tr.svg" alt="" width="20" height="14">TR</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en"><img class="flag-icon" src="/flag-gb.svg" alt="" width="20" height="14">EN</button>
     </div>
   </div>
-
-  <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
-    <ul id="nav-list">
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="hakkimda.html" class="is-current" aria-current="page" data-i18n="nav.about">About</a></li>
-        <li><a href="projeler.html" data-i18n="nav.projects">Projects</a></li>
-        <li><a href="blog.html" data-i18n="nav.blog">Blog / Articles</a></li>
-        <li><a href="iletisim.html" data-i18n="nav.contact">Contact</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main>
 
-<div class="page-title-block">
-  <h1 data-i18n="about.sectionLabel">About</h1>
-</div>
-
-  <section id="hakkimda" class="section" style="padding-top:3rem;">
-    <div class="about-intro">
-      <h2 class="about-name" data-i18n="about.heading">Ayberk Ceyran</h2>
+  <section id="blog" class="section">
+    <div class="section-head">
+      <span class="section-index" data-i18n="blog.sectionLabel">Blog / Articles</span>
+      <h2 data-i18n="blog.heading">Blog / Articles</h2>
     </div>
-    <div class="section-body about-grid">
-      <div class="about-text">
-        <p data-i18n="about.paragraph1">I was born in 2007. I'm interested in economics, software, data analysis, and artificial intelligence, and I keep working to develop myself in these areas &mdash; particularly in Python, web development, and data science. I'm also preparing for the SAT and aiming to study economics in Canada.</p>
-        <p data-i18n="about.paragraph2">I created this website to share my projects, research, articles, and the work I'll keep developing over time. While documenting my own learning process, I hope the content I produce can also be useful to others.</p>
-        <p data-i18n="about.paragraph3">In the long run, I aim to develop projects that bring technology and economics together, pursue academic work, and contribute to the production of knowledge.</p>
-        <p data-i18n="about.paragraph4">The most important figure who has inspired me throughout my life is Gazi Mustafa Kemal Atat&uuml;rk, the founder of our Republic. The importance he placed on science, reason, freedom, and modernization is among the core values I hold as well.</p>
-        <p data-i18n="about.paragraph5">Thank you for visiting my website.</p>
-      </div>
-      <div>
-        <div class="about-portrait">
-          <img src="ataturk.jpg" alt="Mustafa Kemal Atatürk" loading="lazy">
-        </div>
-        <p class="about-portrait-caption">Gazi Mustafa Kemal Atat&uuml;rk</p>
-      </div>
-    </div>
+    <ul class="post-list">
+      <li class="post-item">
+        <span class="post-date" data-i18n="blog.posts.0.date">July 14, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.0.title">Why Local Transparency Can Also Work at the National Scale</a></h3>
+        <p data-i18n="blog.posts.0.description">A short assessment of how opening up budget data helps rebuild trust.</p>
+      </li>
+      <li class="post-item">
+        <span class="post-date" data-i18n="blog.posts.1.date">June 2, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.1.title">Listening Is a Form of Governance</a></h3>
+        <p data-i18n="blog.posts.1.description">Notes and lessons from the first six months of the neighborhood councils.</p>
+      </li>
+      <li class="post-item">
+        <span class="post-date" data-i18n="blog.posts.2.date">April 18, 2026</span>
+        <h3><a href="#" data-i18n="blog.posts.2.title">Politics Built With Young People</a></h3>
+        <p data-i18n="blog.posts.2.description">Observations from the first term of the Youth Policy Workshop.</p>
+      </li>
+    </ul>
   </section>
 
 </main>
-
-<a class="fab-contact" href="iletisim.html" data-i18n="projects.fabText">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3V4z"></path></svg>
-  <span data-i18n="projects.fabText">Get in Touch</span>
-</a>
 
 <div class="site-signature" aria-hidden="true">
   <svg viewBox="0 0 1674 485" xmlns="http://www.w3.org/2000/svg" class="signature-mark">
@@ -112,6 +86,6 @@
   <p>© <span id="year"></span> Ayberk Ceyran. <span data-i18n="footer.rights">All rights reserved.</span></p>
 </footer>
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

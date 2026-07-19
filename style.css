@@ -1327,7 +1327,7 @@ img{ max-width: 100%; display: block; }
   border-top: 1px solid var(--color-rule);
 }
 
-/* İmza animasyonu */
+/* İmza */
 .site-signature{
   display: flex;
   justify-content: center;
@@ -1335,64 +1335,14 @@ img{ max-width: 100%; display: block; }
 }
 
 .site-signature svg{
-  width: clamp(200px, 32vw, 320px);
+  width: clamp(160px, 22vw, 240px);
   height: auto;
   display: block;
   overflow: visible;
 }
 
-/* İmza, kalemle yazılıyormuş gibi çizilip sonra silinir; sonsuz döngü */
-.sig-stroke{
-  fill: none;
-  stroke: var(--color-gold-soft);
-  stroke-width: 3.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  animation-duration: 6.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-
-@keyframes sigDraw0{
-  0%   { stroke-dashoffset: 1; }
-  20%  { stroke-dashoffset: 0; }
-  58%  { stroke-dashoffset: 0; }
-  82%  { stroke-dashoffset: -1; }
-  100% { stroke-dashoffset: -1; }
-}
-@keyframes sigDraw1{
-  0%   { stroke-dashoffset: 1; }
-  9%   { stroke-dashoffset: 1; }
-  32%  { stroke-dashoffset: 0; }
-  58%  { stroke-dashoffset: 0; }
-  82%  { stroke-dashoffset: -1; }
-  100% { stroke-dashoffset: -1; }
-}
-@keyframes sigDraw2{
-  0%   { stroke-dashoffset: 1; }
-  17%  { stroke-dashoffset: 1; }
-  42%  { stroke-dashoffset: 0; }
-  58%  { stroke-dashoffset: 0; }
-  82%  { stroke-dashoffset: -1; }
-  100% { stroke-dashoffset: -1; }
-}
-@keyframes sigDraw3{
-  0%   { stroke-dashoffset: 1; }
-  25%  { stroke-dashoffset: 1; }
-  48%  { stroke-dashoffset: 0; }
-  58%  { stroke-dashoffset: 0; }
-  82%  { stroke-dashoffset: -1; }
-  100% { stroke-dashoffset: -1; }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .sig-stroke{
-    animation: none;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-  }
+.signature-mark{
+  color: #1a1a1a;
 }
 
 
