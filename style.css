@@ -128,10 +128,10 @@ img{ max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem clamp(1.5rem, 5vw, 4rem);
-  background: linear-gradient(165deg, rgba(214, 180, 100, 0.95) 0%, rgba(180, 143, 70, 0.95) 60%, rgba(156, 122, 46, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(252, 249, 240, 0.94) 0%, rgba(246, 239, 220, 0.9) 100%);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 10px 22px -8px rgba(90, 68, 20, 0.45);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 18px -10px rgba(120, 100, 50, 0.28);
 }
 
 .brand-mark{
@@ -157,7 +157,7 @@ img{ max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-ink-on-navy);
+  color: var(--color-ink);
   position: relative;
   padding-bottom: 0.3rem;
   transition: color 0.25s ease;
@@ -169,13 +169,13 @@ img{ max-width: 100%; display: block; }
   left: 0; bottom: 0;
   width: 0;
   height: 1px;
-  background: var(--color-ink);
+  background: var(--color-gold-dark);
   transition: width 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible{
-  color: var(--color-ink);
+  color: var(--color-gold-dark);
 }
 .main-nav a:hover::after,
 .main-nav a:focus-visible::after{
@@ -194,7 +194,7 @@ img{ max-width: 100%; display: block; }
 .nav-toggle span{
   width: 22px;
   height: 1px;
-  background: var(--color-ink-on-navy);
+  background: var(--color-ink);
 }
 
 @media (max-width: 720px){
@@ -206,8 +206,8 @@ img{ max-width: 100%; display: block; }
     left: 0;
     flex-direction: column;
     gap: 0;
-    background: linear-gradient(165deg, rgba(214, 180, 100, 0.97) 0%, rgba(156, 122, 46, 0.97) 100%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background: linear-gradient(180deg, rgba(252, 249, 240, 0.97) 0%, rgba(246, 239, 220, 0.97) 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
@@ -216,7 +216,7 @@ img{ max-width: 100%; display: block; }
   .main-nav a{
     display: block;
     padding: 1rem clamp(1.5rem, 5vw, 4rem);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -241,7 +241,7 @@ img{ max-width: 100%; display: block; }
   font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: var(--tracking-mid);
-  color: var(--color-ink-on-navy-muted);
+  color: var(--color-ink-muted);
   background: none;
   border: none;
   padding: 0.3rem 0.15rem;
@@ -261,11 +261,11 @@ img{ max-width: 100%; display: block; }
 
 .lang-btn:hover,
 .lang-btn:focus-visible{
-  color: var(--color-ink-on-navy);
+  color: var(--color-ink);
 }
 
 .lang-btn.is-active{
-  color: var(--color-ink);
+  color: var(--color-gold-dark);
   font-weight: 600;
 }
 
