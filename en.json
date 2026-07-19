@@ -81,6 +81,7 @@
     "sectionLabel": "Blog / Articles",
     "heading": "Blog / Articles",
     "readMore": "Read More",
+    "searchPlaceholder": "Search articles...",
     "posts": [
       {
         "date": "July 19, 2026",

@@ -15,7 +15,7 @@ const STORAGE_KEY = 'site-lang';
 // Metin dışında güncellenmesi gereken öznitelikler (attribute).
 // Yeni bir öznitelik türü gerekirse buraya eklemek yeterli
 // (örn. 'placeholder', 'title').
-const I18N_ATTRS = ['alt', 'aria-label', 'content'];
+const I18N_ATTRS = ['alt', 'aria-label', 'content', 'href', 'placeholder'];
 
 const translations = {};
 
@@ -48,7 +48,7 @@ function resolveKey(dict, path) {
 async function loadTranslations() {
   const entries = await Promise.all(
     SUPPORTED_LANGS.map(async (lang) => {
-      const res = await fetch(`${lang}.json`);
+      const res = await fetch(`/${lang}.json`);
       if (!res.ok) throw new Error(`Çeviri dosyası yüklenemedi: ${lang}.json`);
       return [lang, await res.json()];
     })
@@ -104,6 +104,95 @@ async function initI18n() {
 }
 
 /* ============================================================
+   Site geneli arama (header) — makale başlıklarında arama yapar
+   ============================================================ */
+
+function initSiteSearch() {
+  const toggle = document.querySelector('.site-search-toggle');
+  const panel = document.getElementById('site-search-panel');
+  const input = document.getElementById('site-search-input');
+  const results = document.getElementById('site-search-results');
+  if (!toggle || !panel || !input || !results) return;
+
+  function currentLang() {
+    return document.documentElement.getAttribute('lang') || DEFAULT_LANG;
+  }
+
+  function openPanel() {
+    panel.classList.add('is-open');
+    toggle.classList.add('is-active');
+    toggle.setAttribute('aria-expanded', 'true');
+    input.focus();
+  }
+
+  function closePanel() {
+    panel.classList.remove('is-open');
+    toggle.classList.remove('is-active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (panel.classList.contains('is-open')) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  });
+
+  panel.addEventListener('click', (event) => event.stopPropagation());
+
+  document.addEventListener('click', () => closePanel());
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closePanel();
+  });
+
+  function renderResults(query) {
+    const dict = translations[currentLang()];
+    const posts = (dict && dict.blog && dict.blog.posts) || [];
+    results.innerHTML = '';
+
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+
+    const matches = posts.filter((post) =>
+      post.title.toLowerCase().includes(q) ||
+      (post.description || '').toLowerCase().includes(q)
+    );
+
+    if (matches.length === 0) {
+      const empty = document.createElement('li');
+      empty.className = 'site-search-empty';
+      empty.textContent = (dict && dict.header && dict.header.searchNoResults) || 'No results found.';
+      results.appendChild(empty);
+      return;
+    }
+
+    matches.forEach((post) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = post.href;
+
+      const title = document.createElement('span');
+      title.className = 'result-title';
+      title.textContent = post.title;
+
+      const date = document.createElement('span');
+      date.className = 'result-date';
+      date.textContent = post.date;
+
+      a.appendChild(title);
+      a.appendChild(date);
+      li.appendChild(a);
+      results.appendChild(li);
+    });
+  }
+
+  input.addEventListener('input', () => renderResults(input.value));
+}
+
+/* ============================================================
    Genel sayfa etkileşimleri
    ============================================================ */
 
@@ -113,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Mobil navigasyon aç/kapa
-  const toggle = document.querySelector('.nav-toggle');
+  const toggle = document.querySelector('.menu-toggle');
   const navList = document.getElementById('nav-list');
 
   if (toggle && navList) {
@@ -131,4 +220,57 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initI18n();
+  initSiteSearch();
+
+  // Projeler sayfası — sekme filtresi ve arama kutusu
+  const projectGrid = document.getElementById('project-grid');
+  if (projectGrid) {
+    const cards = Array.from(projectGrid.querySelectorAll('.project-card'));
+    const tabs = document.querySelectorAll('.project-tab');
+    const searchInput = document.getElementById('project-search-input');
+    let activeFilter = 'all';
+
+    function applyFilters() {
+      const query = (searchInput && searchInput.value || '').trim().toLowerCase();
+      cards.forEach((card) => {
+        const matchesFilter = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
+        const text = card.textContent.toLowerCase();
+        const matchesSearch = query === '' || text.includes(query);
+        card.classList.toggle('is-hidden', !(matchesFilter && matchesSearch));
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        activeFilter = tab.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+  }
+
+  // Blog / Makale sayfası — yazı arama kutusu
+  const postList = document.getElementById('post-list');
+  if (postList) {
+    const posts = Array.from(postList.querySelectorAll('.post-item'));
+    const blogSearchInput = document.getElementById('blog-search-input');
+
+    function applyBlogFilter() {
+      const query = (blogSearchInput && blogSearchInput.value || '').trim().toLowerCase();
+      posts.forEach((post) => {
+        const text = post.textContent.toLowerCase();
+        const matches = query === '' || text.includes(query);
+        post.classList.toggle('is-hidden', !matches);
+      });
+    }
+
+    if (blogSearchInput) {
+      blogSearchInput.addEventListener('input', applyBlogFilter);
+    }
+  }
 });

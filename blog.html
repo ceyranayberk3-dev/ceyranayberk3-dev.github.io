@@ -69,12 +69,22 @@
 
 <main>
 
-  <section id="blog" class="section">
+<div class="page-title-block">
+  <h1 data-i18n="blog.sectionLabel">Blog / Articles</h1>
+</div>
+
+  <section id="blog" class="section" style="padding-top:3rem;">
     <div class="section-head">
       <span class="section-index" data-i18n="blog.sectionLabel">Blog / Articles</span>
       <h2 data-i18n="blog.heading">Blog / Articles</h2>
     </div>
-    <ul class="post-list">
+
+    <div class="project-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="blog-search-input" data-i18n-placeholder="blog.searchPlaceholder" placeholder="Search articles...">
+    </div>
+
+    <ul class="post-list" id="post-list">
       <li class="post-item post-feature">
         <a href="blog-saglik-sistemi-ozel-mi-devlet-mi.html" data-i18n-href="blog.posts.0.href">
           <div class="post-cover">
@@ -90,6 +100,11 @@
   </section>
 
 </main>
+
+<a class="fab-contact" href="iletisim.html" data-i18n="projects.fabText">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3V4z"></path></svg>
+  <span data-i18n="projects.fabText">Get in Touch</span>
+</a>
 
 <div class="site-signature" aria-hidden="true">
   <svg viewBox="0 0 1152 576" xmlns="http://www.w3.org/2000/svg">
