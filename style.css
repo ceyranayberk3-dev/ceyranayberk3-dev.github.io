@@ -729,12 +729,12 @@ img{ max-width: 100%; display: block; }
 
 .post-item p{ color: var(--color-ink-muted); }
 
-/* Tek makale — kapak görseli üstte, başlık/açıklama altında (alt alta) */
+/* Tek makale — artık kapak görseli olmadığından normal öğe gibi görünür */
 .post-feature{
-  padding: 0;
-  border: none;
+  padding: 2.2rem 0;
+  border-top: 1px solid var(--color-rule);
 }
-.post-feature:last-child{ border: none; }
+.post-feature:last-child{ border-bottom: 1px solid var(--color-rule); }
 
 .post-cover{
   display: block;
@@ -1055,7 +1055,7 @@ img{ max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-flag-red);
+  background: linear-gradient(160deg, var(--color-gold-dark) 0%, var(--color-gold-deep) 100%);
   color: #fff;
   border-radius: 999px;
   padding: 0.85rem 1.35rem;
@@ -1063,7 +1063,7 @@ img{ max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: var(--tracking-mid);
   text-transform: uppercase;
-  box-shadow: 0 10px 24px -10px rgba(165, 13, 38, 0.55);
+  box-shadow: 0 10px 24px -10px rgba(122, 93, 34, 0.55);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1071,7 +1071,7 @@ img{ max-width: 100%; display: block; }
 
 .fab-contact:hover{
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -10px rgba(165, 13, 38, 0.65);
+  box-shadow: 0 14px 30px -10px rgba(122, 93, 34, 0.65);
   color: #fff;
 }
 
@@ -1117,6 +1117,24 @@ img{ max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
 }
+
+/* İletişim bilgileri — bülten kutusuyla aynı altın tonlu çerçeve */
+.contact-info-framed{
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.4rem clamp(1.6rem, 4vw, 3rem);
+  border: 1px solid var(--color-rule);
+  border-radius: 22px;
+  background: linear-gradient(160deg, #F1EFEA 0%, #E7E4DC 100%);
+  box-shadow: 0 16px 34px -20px rgba(60, 58, 50, 0.35), inset 0 0 0 1px rgba(212, 175, 55, 0.18);
+}
+
+.contact-info-framed > p{
+  margin-top: 0;
+  text-align: center;
+}
+
+.contact-info-framed .contact-list{ margin-top: 1.2rem; }
 
 .contact-form label{
   font-size: 0.75rem;
