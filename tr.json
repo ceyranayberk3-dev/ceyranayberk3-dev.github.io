@@ -1,12 +1,23 @@
 {
   "meta": {
     "title": "Ayberk Ceyran",
-    "description": "Ayberk Ceyran — Resmî Web Sitesi"
+    "description": "Ayberk Ceyran — Resmî Web Sitesi",
+    "titleHome": "Ayberk Ceyran",
+    "titleAbout": "Hakkımda | Ayberk Ceyran",
+    "titleProjects": "Projeler | Ayberk Ceyran",
+    "titleBlog": "Blog / Makale | Ayberk Ceyran",
+    "titleContact": "İletişim | Ayberk Ceyran"
   },
   "header": {
     "logoAlt": "Ayberk Ceyran logosu",
     "navAriaLabel": "Ana menü",
-    "langSwitchAriaLabel": "Dil seçici"
+    "langSwitchAriaLabel": "Dil seçici",
+    "menuLabel": "MENÜ",
+    "searchAriaLabel": "Ara",
+    "searchLabel": "ARA",
+    "searchPlaceholder": "Makalelerde ara...",
+    "searchNoResults": "Sonuç bulunamadı.",
+    "topbar": "Ekonomi · Siyaset Bilimi ve Kamu Yönetimi"
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -19,6 +30,14 @@
     "eyebrow": "Ekonomi · Siyaset Bilimi ve Kamu Yönetimi",
     "quoteText": "“Hürriyet ve istiklal benim karakterimdir.”",
     "quoteAuthor": "— Mustafa Kemal Atatürk"
+  },
+  "home": {
+    "teaser": {
+      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
+      "label": "Yeni Makale",
+      "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
+      "cta": "Şimdi Oku →"
+    }
   },
   "about": {
     "sectionLabel": "Hakkımda",
@@ -36,6 +55,13 @@
   "projects": {
     "sectionLabel": "Projeler",
     "heading": "Projeler",
+    "searchPlaceholder": "Projelerde ara...",
+    "tabs": {
+      "all": "Tümü",
+      "policy": "Kamu Politikası",
+      "youth": "Gençlik"
+    },
+    "fabText": "İletişime Geç",
     "items": [
       {
         "title": "Açık Bütçe İnisiyatifi",
@@ -54,21 +80,13 @@
   "blog": {
     "sectionLabel": "Blog / Makale",
     "heading": "Blog / Makale",
+    "readMore": "Devamını Oku",
     "posts": [
       {
-        "date": "14 Temmuz 2026",
-        "title": "Yerelde Şeffaflık Neden Ulusal Ölçekte de Mümkün?",
-        "description": "Bütçe verilerini açmanın, güveni yeniden inşa etmedeki payı üzerine kısa bir değerlendirme."
-      },
-      {
-        "date": "2 Haziran 2026",
-        "title": "Dinlemek Bir Yönetim Biçimidir",
-        "description": "Mahalle meclislerinin ilk altı ayından notlar ve öğrendiklerimiz."
-      },
-      {
-        "date": "18 Nisan 2026",
-        "title": "Gençlerle Kurulan Siyaset",
-        "description": "Genç Politika Atölyesi'nin ilk dönemine dair gözlemler."
+        "date": "19 Temmuz 2026",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
+        "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
+        "description": "Özel ve kamu sağlık modellerini; Amerika, Küba ve dünyada yedi yıldır birinci seçilen Tayvan'ın hibrit sistemi üzerinden karşılaştıran bir değerlendirme."
       }
     ]
   },
@@ -86,6 +104,14 @@
       "message": "Mesajınız",
       "submit": "Gönder",
       "note": "Form şu an statik olarak hazırlanmıştır; gönderim için bir servis (Formspree, Netlify Forms vb.) bağlanmalıdır."
+    },
+    "newsletter": {
+      "formAriaLabel": "Bülten aboneliği",
+      "heading": "Yeniliklerden haberdar olmak için bültenimize abone olun",
+      "placeholder": "E-posta Adresiniz",
+      "privacyText": "Kişisel verilere ilişkin aydınlatma metnine",
+      "privacyLink": "buradan ulaşabilirsiniz",
+      "button": "Abone Ol"
     }
   },
   "footer": {

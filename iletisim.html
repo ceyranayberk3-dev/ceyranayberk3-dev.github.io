@@ -20,31 +20,51 @@
 
 <div class="rule-left" aria-hidden="true"></div>
 
-<header class="site-header">
-  <a href="index.html" class="brand-mark">
-    <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
-  </a>
+<div class="top-bar" data-i18n="header.topbar">Economics · Political Science &amp; Public Administration</div>
 
-  <div class="header-actions">
-    <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="nav-list">
+<header class="site-header">
+  <div class="header-top">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <span class="menu-toggle-label" data-i18n="header.menuLabel">MENU</span>
+    </button>
+
+    <a href="index.html" class="brand-mark">
+      <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
+    </a>
+
+    <div class="header-utilities">
+      <div class="site-search">
+        <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span class="site-search-label" data-i18n="header.searchLabel">SEARCH</span>
+        </button>
+        <div class="site-search-panel" id="site-search-panel">
+          <div class="site-search-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
+          </div>
+          <ul class="site-search-results" id="site-search-results"></ul>
+        </div>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
+        <button type="button" class="lang-btn" data-lang="tr"><img class="flag-icon" src="flag-tr.svg" alt="" width="20" height="14">TR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
+    <ul id="nav-list">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="hakkimda.html" data-i18n="nav.about">About</a></li>
         <li><a href="projeler.html" data-i18n="nav.projects">Projects</a></li>
         <li><a href="blog.html" data-i18n="nav.blog">Blog / Articles</a></li>
         <li><a href="iletisim.html" class="is-current" aria-current="page" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
-      <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
-    </div>
-  </div>
+    </ul>
+  </nav>
 </header>
 
 <main>
@@ -75,6 +95,29 @@
 
         <button type="submit" data-i18n="contact.form.submit">Send</button>
         <p class="form-note" data-i18n="contact.form.note">This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions.</p>
+      </form>
+    </div>
+
+    <div class="newsletter-card">
+      <div class="newsletter-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="52" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18 L32 38 L58 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M44 8c-3 0-5 2-5 5 0 4 5 7 5 7s5-3 5-7c0-3-2-5-5-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="newsletter-copy">
+        <p data-i18n="contact.newsletter.heading">Subscribe to our newsletter to stay updated on new articles</p>
+      </div>
+      <form class="newsletter-form" aria-label="Newsletter subscription" data-i18n-aria-label="contact.newsletter.formAriaLabel">
+        <div class="newsletter-input-row">
+          <input type="email" id="newsletter-email" name="newsletter-email" autocomplete="email" required placeholder="Your email address" data-i18n-placeholder="contact.newsletter.placeholder">
+        </div>
+        <p class="newsletter-privacy">
+          <span data-i18n="contact.newsletter.privacyText">You can read our privacy notice</span>
+          <a href="#" data-i18n="contact.newsletter.privacyLink">here</a>.
+        </p>
+        <button type="submit" data-i18n="contact.newsletter.button">Subscribe</button>
       </form>
     </div>
   </section>

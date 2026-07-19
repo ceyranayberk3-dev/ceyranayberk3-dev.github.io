@@ -1,12 +1,23 @@
 {
   "meta": {
     "title": "Ayberk Ceyran",
-    "description": "Ayberk Ceyran — Official Website"
+    "description": "Ayberk Ceyran — Official Website",
+    "titleHome": "Ayberk Ceyran",
+    "titleAbout": "About | Ayberk Ceyran",
+    "titleProjects": "Projects | Ayberk Ceyran",
+    "titleBlog": "Blog / Articles | Ayberk Ceyran",
+    "titleContact": "Contact | Ayberk Ceyran"
   },
   "header": {
     "logoAlt": "Ayberk Ceyran logo",
     "navAriaLabel": "Main menu",
-    "langSwitchAriaLabel": "Language selector"
+    "langSwitchAriaLabel": "Language selector",
+    "menuLabel": "MENU",
+    "searchAriaLabel": "Search",
+    "searchLabel": "SEARCH",
+    "searchPlaceholder": "Search articles...",
+    "searchNoResults": "No results found.",
+    "topbar": "Economics · Political Science & Public Administration"
   },
   "nav": {
     "home": "Home",
@@ -19,6 +30,14 @@
     "eyebrow": "Economics · Political Science & Public Administration",
     "quoteText": "“Freedom and independence are my character.”",
     "quoteAuthor": "— Mustafa Kemal Atatürk"
+  },
+  "home": {
+    "teaser": {
+      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
+      "label": "New Article",
+      "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
+      "cta": "Read Now →"
+    }
   },
   "about": {
     "sectionLabel": "About",
@@ -36,6 +55,13 @@
   "projects": {
     "sectionLabel": "Projects",
     "heading": "Projects",
+    "searchPlaceholder": "Search projects...",
+    "tabs": {
+      "all": "All",
+      "policy": "Public Policy",
+      "youth": "Youth"
+    },
+    "fabText": "Get in Touch",
     "items": [
       {
         "title": "Open Budget Initiative",
@@ -54,21 +80,13 @@
   "blog": {
     "sectionLabel": "Blog / Articles",
     "heading": "Blog / Articles",
+    "readMore": "Read More",
     "posts": [
       {
-        "date": "July 14, 2026",
-        "title": "Why Local Transparency Can Also Work at the National Scale",
-        "description": "A short assessment of how opening up budget data helps rebuild trust."
-      },
-      {
-        "date": "June 2, 2026",
-        "title": "Listening Is a Form of Governance",
-        "description": "Notes and lessons from the first six months of the neighborhood councils."
-      },
-      {
-        "date": "April 18, 2026",
-        "title": "Politics Built With Young People",
-        "description": "Observations from the first term of the Youth Policy Workshop."
+        "date": "July 19, 2026",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
+        "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
+        "description": "A comparison of private and public healthcare models — from the US and Cuba to Taiwan's hybrid system, ranked #1 in the world for seven years running."
       }
     ]
   },
@@ -86,6 +104,14 @@
       "message": "Your Message",
       "submit": "Send",
       "note": "This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions."
+    },
+    "newsletter": {
+      "formAriaLabel": "Newsletter subscription",
+      "heading": "Subscribe to our newsletter to stay updated on new articles",
+      "placeholder": "Your Email Address",
+      "privacyText": "You can read our privacy notice",
+      "privacyLink": "here",
+      "button": "Subscribe"
     }
   },
   "footer": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.title">Ayberk Ceyran</title>
+<title data-i18n="meta.titleBlog">Ayberk Ceyran</title>
 <meta name="description" content="Ayberk Ceyran — Official Website" data-i18n-content="meta.description">
 
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -20,31 +20,51 @@
 
 <div class="rule-left" aria-hidden="true"></div>
 
-<header class="site-header">
-  <a href="index.html" class="brand-mark">
-    <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
-  </a>
+<div class="top-bar" data-i18n="header.topbar">Economics · Political Science &amp; Public Administration</div>
 
-  <div class="header-actions">
-    <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="nav-list">
+<header class="site-header">
+  <div class="header-top">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <span class="menu-toggle-label" data-i18n="header.menuLabel">MENU</span>
+    </button>
+
+    <a href="index.html" class="brand-mark">
+      <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
+    </a>
+
+    <div class="header-utilities">
+      <div class="site-search">
+        <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span class="site-search-label" data-i18n="header.searchLabel">SEARCH</span>
+        </button>
+        <div class="site-search-panel" id="site-search-panel">
+          <div class="site-search-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
+          </div>
+          <ul class="site-search-results" id="site-search-results"></ul>
+        </div>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
+        <button type="button" class="lang-btn" data-lang="tr"><img class="flag-icon" src="flag-tr.svg" alt="" width="20" height="14">TR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
+    <ul id="nav-list">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="hakkimda.html" data-i18n="nav.about">About</a></li>
         <li><a href="projeler.html" data-i18n="nav.projects">Projects</a></li>
         <li><a href="blog.html" class="is-current" aria-current="page" data-i18n="nav.blog">Blog / Articles</a></li>
         <li><a href="iletisim.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
-      <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
-    </div>
-  </div>
+    </ul>
+  </nav>
 </header>
 
 <main>
@@ -55,20 +75,16 @@
       <h2 data-i18n="blog.heading">Blog / Articles</h2>
     </div>
     <ul class="post-list">
-      <li class="post-item">
-        <span class="post-date" data-i18n="blog.posts.0.date">July 14, 2026</span>
-        <h3><a href="#" data-i18n="blog.posts.0.title">Why Local Transparency Can Also Work at the National Scale</a></h3>
-        <p data-i18n="blog.posts.0.description">A short assessment of how opening up budget data helps rebuild trust.</p>
-      </li>
-      <li class="post-item">
-        <span class="post-date" data-i18n="blog.posts.1.date">June 2, 2026</span>
-        <h3><a href="#" data-i18n="blog.posts.1.title">Listening Is a Form of Governance</a></h3>
-        <p data-i18n="blog.posts.1.description">Notes and lessons from the first six months of the neighborhood councils.</p>
-      </li>
-      <li class="post-item">
-        <span class="post-date" data-i18n="blog.posts.2.date">April 18, 2026</span>
-        <h3><a href="#" data-i18n="blog.posts.2.title">Politics Built With Young People</a></h3>
-        <p data-i18n="blog.posts.2.description">Observations from the first term of the Youth Policy Workshop.</p>
+      <li class="post-item post-feature">
+        <a href="blog-saglik-sistemi-ozel-mi-devlet-mi.html" data-i18n-href="blog.posts.0.href">
+          <div class="post-cover">
+            <img src="blog-kapak-saglik-sistemi.jpg" alt="Hastane: Özel sektör mü devlet mi olmalı?" loading="lazy">
+          </div>
+        </a>
+        <span class="post-date" data-i18n="blog.posts.0.date">July 19, 2026</span>
+        <h3><a href="blog-saglik-sistemi-ozel-mi-devlet-mi.html" data-i18n-href="blog.posts.0.href" data-i18n="blog.posts.0.title">Is It Possible to Leave the Healthcare System to the Private Sector?</a></h3>
+        <p data-i18n="blog.posts.0.description">A look at public vs. private healthcare models, from the US and Cuba to Taiwan's award-winning hybrid system.</p>
+        <a class="post-read-more" href="blog-saglik-sistemi-ozel-mi-devlet-mi.html" data-i18n-href="blog.posts.0.href" data-i18n="blog.readMore">Read More</a>
       </li>
     </ul>
   </section>
