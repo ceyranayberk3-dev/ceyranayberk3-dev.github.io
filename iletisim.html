@@ -43,6 +43,17 @@
       <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
       <span class="lang-sep" aria-hidden="true">|</span>
       <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    <div class="site-search">
+      <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <div class="site-search-panel" id="site-search-panel">
+        <div class="site-search-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
+        </div>
+        <ul class="site-search-results" id="site-search-results"></ul>
+      </div>
     </div>
   </div>
 </header>
@@ -75,6 +86,29 @@
 
         <button type="submit" data-i18n="contact.form.submit">Send</button>
         <p class="form-note" data-i18n="contact.form.note">This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions.</p>
+      </form>
+    </div>
+
+    <div class="newsletter-card">
+      <div class="newsletter-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="52" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 18 L32 38 L58 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M44 8c-3 0-5 2-5 5 0 4 5 7 5 7s5-3 5-7c0-3-2-5-5-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="newsletter-copy">
+        <p data-i18n="contact.newsletter.heading">Subscribe to our newsletter to stay updated on new articles</p>
+      </div>
+      <form class="newsletter-form" aria-label="Newsletter subscription" data-i18n-aria-label="contact.newsletter.formAriaLabel">
+        <div class="newsletter-input-row">
+          <input type="email" id="newsletter-email" name="newsletter-email" autocomplete="email" required placeholder="Your email address" data-i18n-placeholder="contact.newsletter.placeholder">
+        </div>
+        <p class="newsletter-privacy">
+          <span data-i18n="contact.newsletter.privacyText">You can read our privacy notice</span>
+          <a href="#" data-i18n="contact.newsletter.privacyLink">here</a>.
+        </p>
+        <button type="submit" data-i18n="contact.newsletter.button">Subscribe</button>
       </form>
     </div>
   </section>

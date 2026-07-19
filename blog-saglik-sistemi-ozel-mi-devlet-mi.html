@@ -42,6 +42,18 @@
     <div class="lang-switch" role="group" aria-label="Dil seçici">
       <span class="lang-btn is-active"><img class="flag-icon" src="flag-tr.svg" alt="" width="20" height="14">TR</span>
     </div>
+    <div class="site-search">
+      <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Ara">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <div class="site-search-panel" id="site-search-panel">
+        <div class="site-search-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="site-search-input" placeholder="Makalelerde ara..." autocomplete="off">
+        </div>
+        <ul class="site-search-results" id="site-search-results"></ul>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -94,6 +106,67 @@
     toggle.addEventListener('click', function () {
       var isOpen = navList.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  var searchToggle = document.querySelector('.site-search-toggle');
+  var searchPanel = document.getElementById('site-search-panel');
+  var searchInput = document.getElementById('site-search-input');
+  var searchResults = document.getElementById('site-search-results');
+  var searchPosts = [];
+
+  fetch('/tr.json').then(function (res) { return res.json(); }).then(function (dict) {
+    searchPosts = (dict.blog && dict.blog.posts) || [];
+  }).catch(function (err) { console.error(err); });
+
+  function openSearch() {
+    searchPanel.classList.add('is-open');
+    searchToggle.classList.add('is-active');
+    searchToggle.setAttribute('aria-expanded', 'true');
+    searchInput.focus();
+  }
+  function closeSearch() {
+    searchPanel.classList.remove('is-open');
+    searchToggle.classList.remove('is-active');
+    searchToggle.setAttribute('aria-expanded', 'false');
+  }
+  if (searchToggle && searchPanel && searchInput && searchResults) {
+    searchToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      searchPanel.classList.contains('is-open') ? closeSearch() : openSearch();
+    });
+    searchPanel.addEventListener('click', function (e) { e.stopPropagation(); });
+    document.addEventListener('click', function () { closeSearch(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSearch(); });
+    searchInput.addEventListener('input', function () {
+      var q = searchInput.value.trim().toLowerCase();
+      searchResults.innerHTML = '';
+      if (!q) return;
+      var matches = searchPosts.filter(function (p) {
+        return p.title.toLowerCase().indexOf(q) !== -1 || (p.description || '').toLowerCase().indexOf(q) !== -1;
+      });
+      if (matches.length === 0) {
+        var empty = document.createElement('li');
+        empty.className = 'site-search-empty';
+        empty.textContent = 'Sonuç bulunamadı.';
+        searchResults.appendChild(empty);
+        return;
+      }
+      matches.forEach(function (post) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = post.href;
+        var title = document.createElement('span');
+        title.className = 'result-title';
+        title.textContent = post.title;
+        var date = document.createElement('span');
+        date.className = 'result-date';
+        date.textContent = post.date;
+        a.appendChild(title);
+        a.appendChild(date);
+        li.appendChild(a);
+        searchResults.appendChild(li);
+      });
     });
   }
 </script>

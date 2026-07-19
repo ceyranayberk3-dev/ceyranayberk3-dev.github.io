@@ -275,6 +275,142 @@ img{ max-width: 100%; display: block; }
 }
 
 /* ---------------------------------------------------------------
+   Site arama (header) — altın/krem tema
+--------------------------------------------------------------- */
+.site-search{
+  position: relative;
+  flex-shrink: 0;
+}
+
+.site-search-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-rule);
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--color-gold-dark);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.site-search-toggle svg{
+  width: 17px;
+  height: 17px;
+}
+
+.site-search-toggle:hover,
+.site-search-toggle:focus-visible,
+.site-search-toggle.is-active{
+  background: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  color: #FBF8F0;
+}
+
+.site-search-panel{
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  width: min(380px, 88vw);
+  background: linear-gradient(180deg, rgba(252, 249, 240, 0.99) 0%, rgba(246, 239, 220, 0.99) 100%);
+  border: 1px solid var(--color-rule);
+  border-radius: 18px;
+  box-shadow: 0 20px 44px -16px rgba(120, 100, 50, 0.38);
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 20;
+}
+
+.site-search-panel.is-open{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.site-search-field{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.05rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.site-search-field svg{
+  width: 16px;
+  height: 16px;
+  color: var(--color-ink-muted);
+  flex-shrink: 0;
+}
+
+.site-search-field input{
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  color: var(--color-ink);
+}
+
+.site-search-results{
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.site-search-results li + li{
+  border-top: 1px solid var(--color-rule);
+}
+
+.site-search-results a{
+  display: block;
+  padding: 0.65rem 0.25rem;
+}
+
+.site-search-results .result-title{
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  transition: color 0.2s ease;
+}
+
+.site-search-results .result-date{
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-top: 0.2rem;
+}
+
+.site-search-results a:hover .result-title,
+.site-search-results a:focus-visible .result-title{
+  color: var(--color-gold-dark);
+}
+
+.site-search-empty{
+  padding: 0.65rem 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+@media (max-width: 480px){
+  .site-search-panel{ right: -52px; width: 90vw; }
+}
+
+/* ---------------------------------------------------------------
    Hero
 --------------------------------------------------------------- */
 .hero{
@@ -967,6 +1103,127 @@ img{ max-width: 100%; display: block; }
   font-size: 0.8rem;
   color: var(--color-ink-muted);
   font-style: italic;
+}
+
+/* ---------------------------------------------------------------
+   Bülten kutusu (İletişim) — altın/gri tema
+--------------------------------------------------------------- */
+.newsletter-card{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 4.5rem;
+  padding: 2.2rem clamp(1.6rem, 4vw, 2.8rem);
+  border: 1px solid var(--color-rule);
+  border-radius: 22px;
+  background: linear-gradient(160deg, #F1EFEA 0%, #E7E4DC 100%);
+  box-shadow: 0 16px 34px -20px rgba(60, 58, 50, 0.35), inset 0 0 0 1px rgba(212, 175, 55, 0.18);
+}
+
+.newsletter-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  color: var(--color-gold-dark);
+}
+
+.newsletter-icon svg{
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter-copy p{
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--color-ink);
+  max-width: 26ch;
+}
+
+.newsletter-copy strong{
+  color: var(--color-gold-dark);
+}
+
+.newsletter-form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 260px;
+}
+
+.newsletter-input-row{
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--color-ink-muted);
+  border-radius: 999px;
+  background: #FBF8F0;
+}
+
+.newsletter-input-row input{
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.newsletter-input-row:focus-within{
+  border-color: var(--color-gold-dark);
+}
+
+.newsletter-privacy{
+  margin: 0;
+  font-size: 0.76rem;
+  color: var(--color-ink-muted);
+}
+
+.newsletter-privacy a{
+  color: var(--color-gold-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.newsletter-form button{
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: #FBF8F0;
+  background: linear-gradient(160deg, var(--color-gold-dark) 0%, #7C611F 100%);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: 999px;
+  padding: 0.75rem 2.1rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.newsletter-form button:hover,
+.newsletter-form button:focus-visible{
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: #FBF8F0;
+}
+
+@media (max-width: 780px){
+  .newsletter-card{
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+  .newsletter-copy p{ max-width: 34ch; }
+  .newsletter-form{ width: 100%; max-width: 380px; }
+  .newsletter-form button{ align-self: center; }
 }
 
 /* ---------------------------------------------------------------

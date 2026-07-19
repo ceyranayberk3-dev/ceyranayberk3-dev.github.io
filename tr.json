@@ -11,7 +11,10 @@
   "header": {
     "logoAlt": "Ayberk Ceyran logosu",
     "navAriaLabel": "Ana menü",
-    "langSwitchAriaLabel": "Dil seçici"
+    "langSwitchAriaLabel": "Dil seçici",
+    "searchAriaLabel": "Ara",
+    "searchPlaceholder": "Makalelerde ara...",
+    "searchNoResults": "Sonuç bulunamadı."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -98,6 +101,14 @@
       "message": "Mesajınız",
       "submit": "Gönder",
       "note": "Form şu an statik olarak hazırlanmıştır; gönderim için bir servis (Formspree, Netlify Forms vb.) bağlanmalıdır."
+    },
+    "newsletter": {
+      "formAriaLabel": "Bülten aboneliği",
+      "heading": "Yeniliklerden haberdar olmak için bültenimize abone olun",
+      "placeholder": "E-posta Adresiniz",
+      "privacyText": "Kişisel verilere ilişkin aydınlatma metnine",
+      "privacyLink": "buradan ulaşabilirsiniz",
+      "button": "Abone Ol"
     }
   },
   "footer": {

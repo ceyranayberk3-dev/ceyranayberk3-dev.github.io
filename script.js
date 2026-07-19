@@ -104,6 +104,95 @@ async function initI18n() {
 }
 
 /* ============================================================
+   Site geneli arama (header) — makale başlıklarında arama yapar
+   ============================================================ */
+
+function initSiteSearch() {
+  const toggle = document.querySelector('.site-search-toggle');
+  const panel = document.getElementById('site-search-panel');
+  const input = document.getElementById('site-search-input');
+  const results = document.getElementById('site-search-results');
+  if (!toggle || !panel || !input || !results) return;
+
+  function currentLang() {
+    return document.documentElement.getAttribute('lang') || DEFAULT_LANG;
+  }
+
+  function openPanel() {
+    panel.classList.add('is-open');
+    toggle.classList.add('is-active');
+    toggle.setAttribute('aria-expanded', 'true');
+    input.focus();
+  }
+
+  function closePanel() {
+    panel.classList.remove('is-open');
+    toggle.classList.remove('is-active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (panel.classList.contains('is-open')) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  });
+
+  panel.addEventListener('click', (event) => event.stopPropagation());
+
+  document.addEventListener('click', () => closePanel());
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closePanel();
+  });
+
+  function renderResults(query) {
+    const dict = translations[currentLang()];
+    const posts = (dict && dict.blog && dict.blog.posts) || [];
+    results.innerHTML = '';
+
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+
+    const matches = posts.filter((post) =>
+      post.title.toLowerCase().includes(q) ||
+      (post.description || '').toLowerCase().includes(q)
+    );
+
+    if (matches.length === 0) {
+      const empty = document.createElement('li');
+      empty.className = 'site-search-empty';
+      empty.textContent = (dict && dict.header && dict.header.searchNoResults) || 'No results found.';
+      results.appendChild(empty);
+      return;
+    }
+
+    matches.forEach((post) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = post.href;
+
+      const title = document.createElement('span');
+      title.className = 'result-title';
+      title.textContent = post.title;
+
+      const date = document.createElement('span');
+      date.className = 'result-date';
+      date.textContent = post.date;
+
+      a.appendChild(title);
+      a.appendChild(date);
+      li.appendChild(a);
+      results.appendChild(li);
+    });
+  }
+
+  input.addEventListener('input', () => renderResults(input.value));
+}
+
+/* ============================================================
    Genel sayfa etkileşimleri
    ============================================================ */
 
@@ -131,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initI18n();
+  initSiteSearch();
 
   // Projeler sayfası — sekme filtresi ve arama kutusu
   const projectGrid = document.getElementById('project-grid');

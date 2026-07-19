@@ -43,6 +43,17 @@
       <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
       <span class="lang-sep" aria-hidden="true">|</span>
       <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    <div class="site-search">
+      <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <div class="site-search-panel" id="site-search-panel">
+        <div class="site-search-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
+        </div>
+        <ul class="site-search-results" id="site-search-results"></ul>
+      </div>
     </div>
   </div>
 </header>

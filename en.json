@@ -11,7 +11,10 @@
   "header": {
     "logoAlt": "Ayberk Ceyran logo",
     "navAriaLabel": "Main menu",
-    "langSwitchAriaLabel": "Language selector"
+    "langSwitchAriaLabel": "Language selector",
+    "searchAriaLabel": "Search",
+    "searchPlaceholder": "Search articles...",
+    "searchNoResults": "No results found."
   },
   "nav": {
     "home": "Home",
@@ -98,6 +101,14 @@
       "message": "Your Message",
       "submit": "Send",
       "note": "This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions."
+    },
+    "newsletter": {
+      "formAriaLabel": "Newsletter subscription",
+      "heading": "Subscribe to our newsletter to stay updated on new articles",
+      "placeholder": "Your Email Address",
+      "privacyText": "You can read our privacy notice",
+      "privacyLink": "here",
+      "button": "Subscribe"
     }
   },
   "footer": {
