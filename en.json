@@ -59,21 +59,12 @@
   "blog": {
     "sectionLabel": "Blog / Articles",
     "heading": "Blog / Articles",
+    "readMore": "Read More",
     "posts": [
       {
-        "date": "July 14, 2026",
-        "title": "Why Local Transparency Can Also Work at the National Scale",
-        "description": "A short assessment of how opening up budget data helps rebuild trust."
-      },
-      {
-        "date": "June 2, 2026",
-        "title": "Listening Is a Form of Governance",
-        "description": "Notes and lessons from the first six months of the neighborhood councils."
-      },
-      {
-        "date": "April 18, 2026",
-        "title": "Politics Built With Young People",
-        "description": "Observations from the first term of the Youth Policy Workshop."
+        "date": "July 19, 2026",
+        "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
+        "description": "A comparison of private and public healthcare models — from the US and Cuba to Taiwan's hybrid system, ranked #1 in the world for seven years running. (Article available in Turkish.)"
       }
     ]
   },

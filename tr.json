@@ -59,21 +59,12 @@
   "blog": {
     "sectionLabel": "Blog / Makale",
     "heading": "Blog / Makale",
+    "readMore": "Devamını Oku",
     "posts": [
       {
-        "date": "14 Temmuz 2026",
-        "title": "Yerelde Şeffaflık Neden Ulusal Ölçekte de Mümkün?",
-        "description": "Bütçe verilerini açmanın, güveni yeniden inşa etmedeki payı üzerine kısa bir değerlendirme."
-      },
-      {
-        "date": "2 Haziran 2026",
-        "title": "Dinlemek Bir Yönetim Biçimidir",
-        "description": "Mahalle meclislerinin ilk altı ayından notlar ve öğrendiklerimiz."
-      },
-      {
-        "date": "18 Nisan 2026",
-        "title": "Gençlerle Kurulan Siyaset",
-        "description": "Genç Politika Atölyesi'nin ilk dönemine dair gözlemler."
+        "date": "19 Temmuz 2026",
+        "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
+        "description": "Özel ve kamu sağlık modellerini; Amerika, Küba ve dünyada yedi yıldır birinci seçilen Tayvan'ın hibrit sistemi üzerinden karşılaştıran bir değerlendirme."
       }
     ]
   },

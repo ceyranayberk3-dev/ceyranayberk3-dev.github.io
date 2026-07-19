@@ -526,6 +526,112 @@ img{ max-width: 100%; display: block; }
 
 .post-item p{ color: var(--color-ink-muted); }
 
+/* Tek makale — kapak görseli üstte, başlık/açıklama altında (alt alta) */
+.post-feature{
+  padding: 0;
+  border: none;
+}
+.post-feature:last-child{ border: none; }
+
+.post-cover{
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.55), 0 10px 26px -14px rgba(30, 25, 10, 0.35);
+  margin-bottom: 1.6rem;
+}
+
+.post-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.post-feature a:hover .post-cover img{
+  transform: scale(1.02);
+}
+
+.post-feature .post-date{ margin-top: 0.4rem; }
+
+.post-feature h3{
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  margin-bottom: 0.7rem;
+}
+
+.post-feature p{
+  color: var(--color-ink-muted);
+  max-width: var(--measure);
+}
+
+.post-read-more{
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  border-bottom: 1px solid var(--color-gold);
+  padding-bottom: 2px;
+}
+
+/* Makale (tekil blog yazısı) sayfası */
+.article-hero{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.55), 0 14px 30px -16px rgba(30, 25, 10, 0.4);
+  margin-bottom: 2.6rem;
+}
+
+.article-hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-meta{
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  margin-bottom: 0.6rem;
+}
+
+.article-title{
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 2.2rem;
+  max-width: var(--measure);
+}
+
+.article-body p{
+  max-width: var(--measure);
+  color: var(--color-ink);
+  margin-bottom: 1.4rem;
+}
+
+.article-back{
+  display: inline-block;
+  margin-top: 2.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 2px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.article-back:hover{
+  color: var(--color-gold-dark);
+  border-color: var(--color-gold);
+}
+
 /* İletişim */
 .contact-grid{
   display: grid;
