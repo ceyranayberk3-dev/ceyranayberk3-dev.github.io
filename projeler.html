@@ -21,56 +21,108 @@
 <div class="rule-left" aria-hidden="true"></div>
 
 <header class="site-header">
-  <a href="index.html" class="brand-mark">
-    <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
-  </a>
+  <div class="header-top">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <span class="menu-toggle-label" data-i18n="header.menuLabel">MENU</span>
+    </button>
 
-  <div class="header-actions">
-    <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="nav-list">
+    <a href="index.html" class="brand-mark">
+      <img src="logo.png" alt="Ayberk Ceyran logo" data-i18n-alt="header.logoAlt">
+    </a>
+
+    <div class="header-utilities">
+      <div class="site-search">
+        <button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-label="Search" data-i18n-aria-label="header.searchAriaLabel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span class="site-search-label" data-i18n="header.searchLabel">SEARCH</span>
+        </button>
+        <div class="site-search-panel" id="site-search-panel">
+          <div class="site-search-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="site-search-input" placeholder="Search articles..." data-i18n-placeholder="header.searchPlaceholder" autocomplete="off">
+          </div>
+          <ul class="site-search-results" id="site-search-results"></ul>
+        </div>
+      </div>
+
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
+        <button type="button" class="lang-btn" data-lang="tr"><img class="flag-icon" src="flag-tr.svg" alt="" width="20" height="14">TR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en"><img class="flag-icon" src="flag-gb.svg" alt="" width="20" height="14">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Main menu" data-i18n-aria-label="header.navAriaLabel">
+    <ul id="nav-list">
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="hakkimda.html" data-i18n="nav.about">About</a></li>
         <li><a href="projeler.html" class="is-current" aria-current="page" data-i18n="nav.projects">Projects</a></li>
         <li><a href="blog.html" data-i18n="nav.blog">Blog / Articles</a></li>
         <li><a href="iletisim.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="header.langSwitchAriaLabel">
-      <button type="button" class="lang-btn" data-lang="tr">🇹🇷 TR</button>
-      <span class="lang-sep" aria-hidden="true">|</span>
-      <button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
-    </div>
-  </div>
+    </ul>
+  </nav>
 </header>
 
 <main>
 
-  <section id="projeler" class="section">
-    <div class="section-head">
-      <span class="section-index" data-i18n="projects.sectionLabel">Projects</span>
-      <h2 data-i18n="projects.heading">Projects</h2>
+<div class="page-title-block">
+  <h1 data-i18n="projects.heading">Projects</h1>
+</div>
+
+  <section id="projeler" class="section" style="padding-top:3rem;">
+
+    <div class="project-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="project-search-input" data-i18n-placeholder="projects.searchPlaceholder" placeholder="Search projects...">
     </div>
-    <ul class="project-list">
-      <li class="project-item">
-        <h3 data-i18n="projects.items.0.title">Open Budget Initiative</h3>
-        <p data-i18n="projects.items.0.description">A project making public spending visible to everyone through plain-language, regular reports.</p>
-      </li>
-      <li class="project-item">
-        <h3 data-i18n="projects.items.1.title">Neighborhood Councils</h3>
-        <p data-i18n="projects.items.1.description">A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice.</p>
-      </li>
-      <li class="project-item">
-        <h3 data-i18n="projects.items.2.title">Youth Policy Workshop</h3>
-        <p data-i18n="projects.items.2.description">An education and mentorship program aiming to make young people founding partners in politics, not just spectators.</p>
-      </li>
-    </ul>
+
+    <div class="project-tabs" role="tablist">
+      <button type="button" class="project-tab is-active" data-filter="all" data-i18n="projects.tabs.all">All</button>
+      <button type="button" class="project-tab" data-filter="policy" data-i18n="projects.tabs.policy">Public Policy</button>
+      <button type="button" class="project-tab" data-filter="youth" data-i18n="projects.tabs.youth">Youth</button>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+      <article class="project-card" data-category="policy">
+        <div class="project-card-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5M5 8v9a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V8"></path></svg>
+        </div>
+        <div class="project-card-body">
+          <h3 data-i18n="projects.items.0.title">Open Budget Initiative</h3>
+          <p data-i18n="projects.items.0.description">A project making public spending visible to everyone through plain-language, regular reports.</p>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="policy">
+        <div class="project-card-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-1a4 4 0 00-4-4M9 20H4v-1a4 4 0 014-4M13 12a4 4 0 10-4-4 4 4 0 004 4zM17 12a3 3 0 100-6 3 3 0 000 6z"></path></svg>
+        </div>
+        <div class="project-card-body">
+          <h3 data-i18n="projects.items.1.title">Neighborhood Councils</h3>
+          <p data-i18n="projects.items.1.description">A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice.</p>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="youth">
+        <div class="project-card-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.42A8 8 0 0121 14v3M5 12v5c3 2 11 2 14 0v-5"></path></svg>
+        </div>
+        <div class="project-card-body">
+          <h3 data-i18n="projects.items.2.title">Youth Policy Workshop</h3>
+          <p data-i18n="projects.items.2.description">An education and mentorship program aiming to make young people founding partners in politics, not just spectators.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
 </main>
+
+<a class="fab-contact" href="iletisim.html" data-i18n="projects.fabText">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3V4z"></path></svg>
+  <span data-i18n="projects.fabText">Get in Touch</span>
+</a>
 
 <div class="site-signature" aria-hidden="true">
   <svg viewBox="0 0 1152 576" xmlns="http://www.w3.org/2000/svg">
