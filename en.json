@@ -32,9 +32,14 @@
     "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
   "home": {
+    "paper": {
+      "label": "Research Paper",
+      "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
+      "cta": "Read PDF →"
+    },
     "teaser": {
       "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
-      "label": "New Article",
+      "label": "Essay",
       "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
       "cta": "Read Now →"
     }
@@ -42,37 +47,31 @@
   "about": {
     "sectionLabel": "About",
     "heading": "Ayberk Ceyran",
-    "paragraph1": "I was born in 2007 in Ankara, though my family is originally from Hekimhan, Malatya. I have a broad range of interests at the intersection of economics, software, data analysis, and artificial intelligence. I focus in particular on software development with Python, data science, and web technologies, continually advancing my technical skills. I'm currently preparing for the SAT toward my academic goals, and I aim to continue my education in economics and data analytics in Canada.",
+    "paragraph1": "I was born in 2007 in Ankara, though my family is originally from Hekimhan, Malatya. I have a broad range of interests at the intersection of economics, software, data analysis, and artificial intelligence. I focus in particular on software development with Python, data science, and web technologies, continually advancing my technical skills. I'm currently preparing for the SAT toward my academic goals, and I aim to continue my education in economics and data analytics in the United States.",
     "paragraph2": "I designed this website as a digital portfolio bringing together my projects, my research, and the outputs of my learning process. My goal with the content I share here is both to document my own development and to serve as a resource for people with similar interests.",
     "paragraph3": "In the long run, I aim to integrate technology and economics to produce projects with real added value, carry out academic research, and contribute to the production of knowledge.",
-    "paragraph5": "Thank you for taking the time to visit my site.",
-    "factBirthplace": "Birthplace",
-    "factEducation": "Education",
-    "factField": "Field",
-    "factFieldValue": "Public Policy"
+    "paragraph5": "Thank you for taking the time to visit my site."
   },
   "projects": {
     "sectionLabel": "Projects",
     "heading": "Projects",
-    "searchPlaceholder": "Search projects...",
-    "tabs": {
-      "all": "All",
-      "policy": "Public Policy",
-      "youth": "Youth"
-    },
     "fabText": "Get in Touch",
     "items": [
       {
-        "title": "Open Budget Initiative",
-        "description": "A project making public spending visible to everyone through plain-language, regular reports."
+        "type": "Research Paper",
+        "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
+        "description": "An independent research paper on the informal economy and tax compliance. It explains why some people choose to work informally while others are pushed into it, compares seven countries (Sweden, Germany, Italy, Estonia, Brazil, Argentina and Türkiye), and draws lessons for Türkiye.",
+        "meta": "22 pages · Revised November 2026",
+        "pdf": "Read the paper (PDF)"
       },
       {
-        "title": "Neighborhood Councils",
-        "description": "A network of regular meetings where decisions are made in the neighborhood, not behind a desk, and residents have a direct voice."
-      },
-      {
-        "title": "Youth Policy Workshop",
-        "description": "An education and mentorship program aiming to make young people founding partners in politics, not just spectators."
+        "type": "Essay",
+        "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
+        "description": "An essay comparing private, public and hybrid healthcare systems through the examples of the United States, Taiwan and Türkiye, with numbered sources.",
+        "meta": "4 pages · Revised November 2026",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
+        "online": "Read online",
+        "pdf": "PDF"
       }
     ]
   },
@@ -86,7 +85,8 @@
         "date": "July 19, 2026",
         "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
         "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
-        "description": "A comparison of private and public healthcare models — from the US and Cuba to Taiwan's hybrid system, ranked #1 in the world for seven years running."
+        "description": "A comparison of private, public and hybrid healthcare models — from the US and Cuba to Taiwan, ranked first in Numbeo's Health Care Index for eight years in a row.",
+        "pdf": "PDF"
       }
     ]
   },
@@ -94,25 +94,9 @@
     "sectionLabel": "Contact",
     "heading": "Contact",
     "intro": "You can reach me for feedback, suggestions, and collaboration requests.",
-    "formAriaLabel": "Contact form",
     "labelEmail": "Email",
     "labelInstagram": "Instagram",
-    "labelX": "X",
-    "form": {
-      "name": "Full Name",
-      "email": "Email",
-      "message": "Your Message",
-      "submit": "Send",
-      "note": "This form is currently static; a service (Formspree, Netlify Forms, etc.) must be connected for submissions."
-    },
-    "newsletter": {
-      "formAriaLabel": "Newsletter subscription",
-      "heading": "Subscribe to our newsletter to stay updated on new articles",
-      "placeholder": "Your Email Address",
-      "privacyText": "You can read our privacy notice",
-      "privacyLink": "here",
-      "button": "Subscribe"
-    }
+    "labelX": "X"
   },
   "footer": {
     "rights": "All rights reserved."

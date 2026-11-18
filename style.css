@@ -1414,6 +1414,107 @@ img{ max-width: 100%; display: block; }
 
 
 /* ---------------------------------------------------------------
+   Çalışmalar: proje kartları, ana sayfa duyuruları, makale kaynakları
+--------------------------------------------------------------- */
+.project-grid{ margin-top: 0; }
+
+.project-card{ display: flex; flex-direction: column; }
+.project-card-visual{ aspect-ratio: 16 / 6; }
+.project-card-body{ display: flex; flex-direction: column; flex: 1; }
+
+.project-card-type{
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 0.45rem;
+}
+
+.project-card-body h3{ line-height: 1.35; }
+
+.project-card-body p.project-card-meta{
+  margin-top: 0.7rem;
+  font-size: 0.82rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+.project-card-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.post-read-more + .post-read-more{ margin-left: 1.3rem; }
+.project-card-links .post-read-more + .post-read-more{ margin-left: 0; }
+
+.home-teaser{ padding: 0.95rem 1.3rem; }
+.home-teaser + .home-teaser{ margin-top: 0.9rem; }
+.home-teaser-title{ white-space: normal; overflow: visible; }
+
+@media (max-width: 560px){
+  .home-teaser-cta{ margin-left: 0; }
+}
+
+.article-body h2{
+  font-size: 1.35rem;
+  max-width: var(--measure);
+  margin: 2.4rem 0 0.9rem;
+}
+
+.article-body h2:first-child{ margin-top: 0; }
+
+.article-pdf{
+  display: inline-block;
+  margin: -1.2rem 0 2.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  border-bottom: 1px solid var(--color-gold);
+  padding-bottom: 2px;
+}
+
+.article-sources{
+  max-width: var(--measure);
+  margin-top: 2.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.article-sources h2{ margin-top: 0; }
+
+.article-sources .sources-note{
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-ink-muted);
+  margin-bottom: 1rem;
+}
+
+.article-sources ol{
+  padding-left: 2rem;
+  font-size: 0.86rem;
+  color: var(--color-ink-muted);
+}
+
+.article-sources li{
+  margin-bottom: 0.55rem;
+  overflow-wrap: anywhere;
+}
+
+.article-sources a{
+  color: var(--color-gold-dark);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.article-body sup a{ color: var(--color-gold-dark); }
+
+/* ---------------------------------------------------------------
    Erişilebilirlik
 --------------------------------------------------------------- */
 a:focus-visible,

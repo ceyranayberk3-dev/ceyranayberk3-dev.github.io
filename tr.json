@@ -32,9 +32,14 @@
     "quoteAuthor": "— Mustafa Kemal Atatürk"
   },
   "home": {
+    "paper": {
+      "label": "Araştırma Makalesi · İngilizce",
+      "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
+      "cta": "PDF'i Oku →"
+    },
     "teaser": {
       "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
-      "label": "Yeni Makale",
+      "label": "Deneme",
       "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
       "cta": "Şimdi Oku →"
     }
@@ -42,37 +47,31 @@
   "about": {
     "sectionLabel": "Hakkımda",
     "heading": "Ayberk Ceyran",
-    "paragraph1": "2007 doğumluyum, Ankara'da doğdum ancak aslen Malatya, Hekimhanlıyım. Ekonomi, yazılım, veri analizi ve yapay zekâ disiplinlerinin kesişim noktasında yer alan geniş bir ilgi alanına sahibim. Özellikle Python ile yazılım geliştirme, veri bilimi ve web teknolojileri üzerine yoğunlaşarak teknik yetkinliklerimi her geçen gün ileriye taşıyorum. Şu an akademik hedeflerim doğrultusunda SAT sınavına hazırlanıyor; eğitim hayatımı Kanada'da ekonomi ve veri analitiği alanlarında sürdürmeyi hedefliyorum.",
+    "paragraph1": "2007 doğumluyum, Ankara'da doğdum ancak aslen Malatya, Hekimhanlıyım. Ekonomi, yazılım, veri analizi ve yapay zekâ disiplinlerinin kesişim noktasında yer alan geniş bir ilgi alanına sahibim. Özellikle Python ile yazılım geliştirme, veri bilimi ve web teknolojileri üzerine yoğunlaşarak teknik yetkinliklerimi her geçen gün ileriye taşıyorum. Şu an akademik hedeflerim doğrultusunda SAT sınavına hazırlanıyor; eğitim hayatımı ABD'de ekonomi ve veri analitiği alanlarında sürdürmeyi hedefliyorum.",
     "paragraph2": "Bu web sitesini; projelerimi, araştırmalarımı ve öğrenme sürecimdeki çıktıları bir araya getiren dijital bir portfolyo olarak tasarladım. Burada paylaştığım içeriklerin hem kendi gelişimimi belgelemek hem de benzer ilgi alanlarına sahip kişiler için bir kaynak oluşturmasını amaçlıyorum.",
     "paragraph3": "Uzun vadede teknoloji ve ekonomi disiplinlerini entegre ederek katma değerli projeler üretmeyi, akademik araştırmalar yapmayı ve bilgi üretimine katkıda bulunmayı hedefliyorum.",
-    "paragraph5": "Siteme vakit ayırdığınız için teşekkür ederim.",
-    "factBirthplace": "Doğum Yeri",
-    "factEducation": "Eğitim",
-    "factField": "Alan",
-    "factFieldValue": "Kamu Politikaları"
+    "paragraph5": "Siteme vakit ayırdığınız için teşekkür ederim."
   },
   "projects": {
     "sectionLabel": "Projeler",
     "heading": "Projeler",
-    "searchPlaceholder": "Projelerde ara...",
-    "tabs": {
-      "all": "Tümü",
-      "policy": "Kamu Politikası",
-      "youth": "Gençlik"
-    },
     "fabText": "İletişime Geç",
     "items": [
       {
-        "title": "Açık Bütçe İnisiyatifi",
-        "description": "Kamu kaynaklarının nereye harcandığını herkesin anlayabileceği bir dille, düzenli raporlarla görünür kılan çalışma."
+        "type": "Araştırma Makalesi · İngilizce",
+        "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
+        "description": "Kayıt dışı ekonomi ve vergi uyumu üzerine bağımsız bir araştırma makalesi. Bazı insanların neden kayıt dışı çalışmayı tercih ettiğini, bazılarının ise neden buna mecbur kaldığını açıklıyor; yedi ülkeyi (İsveç, Almanya, İtalya, Estonya, Brezilya, Arjantin ve Türkiye) karşılaştırıyor ve Türkiye için dersler çıkarıyor.",
+        "meta": "22 sayfa · Kasım 2026'da güncellendi",
+        "pdf": "Makaleyi oku (PDF)"
       },
       {
-        "title": "Mahalle Meclisleri",
-        "description": "Kararların masa başında değil, mahallede alındığı; sakinlerin doğrudan söz sahibi olduğu düzenli toplantı ağı."
-      },
-      {
-        "title": "Genç Politika Atölyesi",
-        "description": "Gençleri siyasetin izleyicisi değil, kurucu ortağı yapmayı amaçlayan eğitim ve mentorluk programı."
+        "type": "Deneme",
+        "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
+        "description": "Özel, kamu ve hibrit sağlık sistemlerini Amerika, Tayvan ve Türkiye örnekleri üzerinden karşılaştıran, numaralı kaynaklara dayanan bir deneme.",
+        "meta": "4 sayfa · Kasım 2026'da güncellendi",
+        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
+        "online": "Sitede oku",
+        "pdf": "PDF (İngilizce)"
       }
     ]
   },
@@ -86,7 +85,8 @@
         "date": "19 Temmuz 2026",
         "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
         "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
-        "description": "Özel ve kamu sağlık modellerini; Amerika, Küba ve dünyada yedi yıldır birinci seçilen Tayvan'ın hibrit sistemi üzerinden karşılaştıran bir değerlendirme."
+        "description": "Özel, kamu ve hibrit sağlık modellerini; Amerika, Küba ve Numbeo Sağlık Hizmetleri Endeksi'nde sekiz yıldır üst üste birinci olan Tayvan üzerinden karşılaştıran bir değerlendirme.",
+        "pdf": "PDF (İngilizce)"
       }
     ]
   },
@@ -94,25 +94,9 @@
     "sectionLabel": "İletişim",
     "heading": "İletişim",
     "intro": "Görüş, öneri ve iş birliği talepleriniz için bana ulaşabilirsiniz.",
-    "formAriaLabel": "İletişim formu",
     "labelEmail": "E-posta",
     "labelInstagram": "Instagram",
-    "labelX": "X",
-    "form": {
-      "name": "Ad Soyad",
-      "email": "E-posta",
-      "message": "Mesajınız",
-      "submit": "Gönder",
-      "note": "Form şu an statik olarak hazırlanmıştır; gönderim için bir servis (Formspree, Netlify Forms vb.) bağlanmalıdır."
-    },
-    "newsletter": {
-      "formAriaLabel": "Bülten aboneliği",
-      "heading": "Yeniliklerden haberdar olmak için bültenimize abone olun",
-      "placeholder": "E-posta Adresiniz",
-      "privacyText": "Kişisel verilere ilişkin aydınlatma metnine",
-      "privacyLink": "buradan ulaşabilirsiniz",
-      "button": "Abone Ol"
-    }
+    "labelX": "X"
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."
