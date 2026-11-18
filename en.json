@@ -1,104 +1,66 @@
 {
   "meta": {
-    "title": "Ayberk Ceyran",
-    "description": "Ayberk Ceyran — Official Website",
     "titleHome": "Ayberk Ceyran",
     "titleAbout": "About | Ayberk Ceyran",
-    "titleProjects": "Projects | Ayberk Ceyran",
-    "titleBlog": "Blog / Articles | Ayberk Ceyran",
-    "titleContact": "Contact | Ayberk Ceyran"
-  },
-  "header": {
-    "logoAlt": "Ayberk Ceyran logo",
-    "navAriaLabel": "Main menu",
-    "langSwitchAriaLabel": "Language selector",
-    "menuLabel": "MENU",
-    "searchAriaLabel": "Search",
-    "searchLabel": "SEARCH",
-    "searchPlaceholder": "Search articles...",
-    "searchNoResults": "No results found.",
-    "topbar": "Economics · Political Science & Public Administration"
+    "titleWork": "Work | Ayberk Ceyran",
+    "title404": "Page not found | Ayberk Ceyran"
   },
   "nav": {
-    "home": "Home",
+    "label": "Main",
+    "language": "Language",
+    "skip": "Skip to content",
     "about": "About",
-    "projects": "Projects",
-    "blog": "Blog / Articles",
+    "work": "Work",
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Economics · Political Science & Public Administration",
-    "quoteText": "“Freedom and independence are my character.”",
-    "quoteAuthor": "— Mustafa Kemal Atatürk"
+    "field": "Economics and public policy",
+    "quote": "“Freedom and independence are my character.”"
   },
   "home": {
+    "intro": "I was born in 2007 in Ankara. I taught myself economics from books, and this site collects the research and writing that came out of it.",
+    "workHeading": "Work",
+    "allWork": "All work, with abstracts"
+  },
+  "work": {
+    "title": "Work",
+    "intro": "A research paper and an essay, both written independently while preparing for university.",
     "paper": {
-      "label": "Research Paper",
-      "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
-      "cta": "Read PDF →"
+      "kind": "Research paper",
+      "meta": "22 pages, revised November 2026",
+      "metaLong": "First draft December 2025, revised November 2026. 22 pages, in English.",
+      "summary": "Why do some people work informally by choice while others are pushed into it? The paper compares seven countries (Sweden, Germany, Italy, Estonia, Brazil, Argentina and Türkiye) and draws lessons for Türkiye.",
+      "abstractHeading": "Abstract",
+      "abstract": "This paper examines the informal economy through an incentive-based institutional framework. It argues that informality arises from two distinct logics: voluntary avoidance driven by cost–benefit calculations and compulsory informality resulting from structural constraints. Drawing on Equity Theory and the Collective Action Problem, it identifies six institutional drivers of informality and compares seven countries: Sweden, Germany, Italy, Estonia, Brazil, Argentina and Türkiye. The comparison suggests that credible penalties discourage evasion, while recurring tax amnesties encourage it. Digitalization appears to be the most effective tool, because it prevents evasion without relying on the individual taxpayer’s initiative. For Türkiye, the paper argues that high inflation makes under-reporting easier, that heavy reliance on consumption taxes shifts the burden onto salaried workers, and that ending recurring amnesties and expanding digitalization offer a more durable path to formalization.",
+      "pdf": "Read the paper (PDF)"
     },
-    "teaser": {
-      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
-      "label": "Essay",
+    "essay": {
+      "kind": "Essay",
+      "meta": "4 pages, revised November 2026",
+      "metaLong": "Written July 2026, revised November 2026. 4 pages, 18 numbered sources.",
       "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
-      "cta": "Read Now →"
+      "href": "/work/healthcare-private-sector/",
+      "summary": "Can healthcare be left to the market? A comparison of the United States, Taiwan and Türkiye, with numbered sources.",
+      "long": "Can healthcare be left entirely to the market? The essay looks at what happened to US charity hospitals when donations fell during the Great Depression, how Taiwan built a hybrid system after 1995, and how overuse and administrative costs strain the system in Türkiye.",
+      "read": "Read the essay",
+      "pdf": "PDF"
     }
   },
   "about": {
-    "sectionLabel": "About",
-    "heading": "Ayberk Ceyran",
-    "paragraph1": "I was born in 2007 in Ankara, though my family is originally from Hekimhan, Malatya. I have a broad range of interests at the intersection of economics, software, data analysis, and artificial intelligence. I focus in particular on software development with Python, data science, and web technologies, continually advancing my technical skills. I'm currently preparing for the SAT toward my academic goals, and I aim to continue my education in economics and data analytics in the United States.",
-    "paragraph2": "I designed this website as a digital portfolio bringing together my projects, my research, and the outputs of my learning process. My goal with the content I share here is both to document my own development and to serve as a resource for people with similar interests.",
-    "paragraph3": "In the long run, I aim to integrate technology and economics to produce projects with real added value, carry out academic research, and contribute to the production of knowledge.",
-    "paragraph5": "Thank you for taking the time to visit my site."
-  },
-  "projects": {
-    "sectionLabel": "Projects",
-    "heading": "Projects",
-    "fabText": "Get in Touch",
-    "items": [
-      {
-        "type": "Research Paper",
-        "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
-        "description": "An independent research paper on the informal economy and tax compliance. It explains why some people choose to work informally while others are pushed into it, compares seven countries (Sweden, Germany, Italy, Estonia, Brazil, Argentina and Türkiye), and draws lessons for Türkiye.",
-        "meta": "22 pages · Revised November 2026",
-        "pdf": "Read the paper (PDF)"
-      },
-      {
-        "type": "Essay",
-        "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
-        "description": "An essay comparing private, public and hybrid healthcare systems through the examples of the United States, Taiwan and Türkiye, with numbered sources.",
-        "meta": "4 pages · Revised November 2026",
-        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
-        "online": "Read online",
-        "pdf": "PDF"
-      }
-    ]
-  },
-  "blog": {
-    "sectionLabel": "Blog / Articles",
-    "heading": "Blog / Articles",
-    "readMore": "Read More",
-    "searchPlaceholder": "Search articles...",
-    "posts": [
-      {
-        "date": "July 19, 2026",
-        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi-en.html",
-        "title": "Is It Possible to Leave the Healthcare System to the Private Sector?",
-        "description": "A comparison of private, public and hybrid healthcare models — from the US and Cuba to Taiwan, ranked first in Numbeo's Health Care Index for eight years in a row.",
-        "pdf": "PDF"
-      }
-    ]
-  },
-  "contact": {
-    "sectionLabel": "Contact",
-    "heading": "Contact",
-    "intro": "You can reach me for feedback, suggestions, and collaboration requests.",
-    "labelEmail": "Email",
-    "labelInstagram": "Instagram",
-    "labelX": "X"
+    "title": "About",
+    "p1": "I was born in 2007 in Ankara, though my family is originally from Hekimhan, Malatya. I have a broad range of interests at the intersection of economics, software, data analysis and artificial intelligence. I focus in particular on software development with Python, data science and web technologies, and I keep improving my technical skills. I am currently preparing for the SAT, and I aim to continue my education in economics and data analytics in the United States.",
+    "p2": "I designed this website as a digital portfolio that brings together my projects, my research and the results of my learning process. With the content I share here, I want both to document my own development and to offer a resource for people with similar interests.",
+    "p3": "In the long run, I aim to combine technology and economics to produce projects with real added value, carry out academic research and contribute to the production of knowledge.",
+    "p4": "Thank you for taking the time to visit my site."
   },
   "footer": {
-    "rights": "All rights reserved."
+    "heading": "Contact",
+    "note": "Feedback, questions about my work and collaboration requests are welcome."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page doesn't exist. The site was reorganized in November 2026, so an old link may point here.",
+    "home": "Go to the home page",
+    "work": "See all work"
   }
 }

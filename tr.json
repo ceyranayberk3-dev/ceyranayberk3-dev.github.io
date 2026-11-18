@@ -1,104 +1,66 @@
 {
   "meta": {
-    "title": "Ayberk Ceyran",
-    "description": "Ayberk Ceyran — Resmî Web Sitesi",
     "titleHome": "Ayberk Ceyran",
     "titleAbout": "Hakkımda | Ayberk Ceyran",
-    "titleProjects": "Projeler | Ayberk Ceyran",
-    "titleBlog": "Blog / Makale | Ayberk Ceyran",
-    "titleContact": "İletişim | Ayberk Ceyran"
-  },
-  "header": {
-    "logoAlt": "Ayberk Ceyran logosu",
-    "navAriaLabel": "Ana menü",
-    "langSwitchAriaLabel": "Dil seçici",
-    "menuLabel": "MENÜ",
-    "searchAriaLabel": "Ara",
-    "searchLabel": "ARA",
-    "searchPlaceholder": "Makalelerde ara...",
-    "searchNoResults": "Sonuç bulunamadı.",
-    "topbar": "Ekonomi · Siyaset Bilimi ve Kamu Yönetimi"
+    "titleWork": "Çalışmalar | Ayberk Ceyran",
+    "title404": "Sayfa bulunamadı | Ayberk Ceyran"
   },
   "nav": {
-    "home": "Ana Sayfa",
+    "label": "Ana menü",
+    "language": "Dil",
+    "skip": "İçeriğe geç",
     "about": "Hakkımda",
-    "projects": "Projeler",
-    "blog": "Blog / Makale",
+    "work": "Çalışmalar",
     "contact": "İletişim"
   },
   "hero": {
-    "eyebrow": "Ekonomi · Siyaset Bilimi ve Kamu Yönetimi",
-    "quoteText": "“Hürriyet ve istiklal benim karakterimdir.”",
-    "quoteAuthor": "— Mustafa Kemal Atatürk"
+    "field": "Ekonomi ve kamu politikası",
+    "quote": "“Hürriyet ve istiklal benim karakterimdir.”"
   },
   "home": {
+    "intro": "2007'de Ankara'da doğdum. Ekonomiyi kitaplardan kendi kendime öğrendim; bu site, bu süreçte ortaya çıkan araştırma ve yazılarımı bir araya getiriyor.",
+    "workHeading": "Çalışmalar",
+    "allWork": "Tüm çalışmalar ve özetleri"
+  },
+  "work": {
+    "title": "Çalışmalar",
+    "intro": "Üniversiteye hazırlanırken bağımsız olarak yazdığım bir araştırma makalesi ve bir deneme.",
     "paper": {
-      "label": "Araştırma Makalesi · İngilizce",
-      "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
-      "cta": "PDF'i Oku →"
+      "kind": "Araştırma makalesi",
+      "meta": "22 sayfa, İngilizce, Kasım 2026'da güncellendi",
+      "metaLong": "İlk taslak Aralık 2025, güncelleme Kasım 2026. 22 sayfa, İngilizce.",
+      "summary": "Bazı insanlar neden kayıt dışı çalışmayı tercih eder, bazıları ise neden buna mecbur kalır? Makale yedi ülkeyi (İsveç, Almanya, İtalya, Estonya, Brezilya, Arjantin ve Türkiye) karşılaştırıyor ve Türkiye için dersler çıkarıyor.",
+      "abstractHeading": "Özet",
+      "abstract": "Bu makale, kayıt dışı ekonomiyi teşviklere dayalı kurumsal bir çerçeveyle inceliyor. Kayıt dışılığın iki farklı mantıktan doğduğunu savunuyor: fayda-maliyet hesabına dayanan gönüllü kaçınma ve yapısal kısıtlardan kaynaklanan zorunlu kayıt dışılık. Eşitlik Kuramı (Equity Theory) ve Kolektif Eylem Sorunu'ndan yararlanarak kayıt dışılığın altı kurumsal nedenini belirliyor ve yedi ülkeyi karşılaştırıyor: İsveç, Almanya, İtalya, Estonya, Brezilya, Arjantin ve Türkiye. Karşılaştırma, inandırıcı cezaların vergi kaçakçılığını caydırdığını, sık tekrarlanan vergi aflarının ise teşvik ettiğini gösteriyor. Dijitalleşme, vergi mükellefinin kendi inisiyatifine bağlı kalmadan kaçakçılığı önlediği için en etkili araç olarak öne çıkıyor. Türkiye için makale, yüksek enflasyonun eksik beyanı kolaylaştırdığını, tüketim vergilerine aşırı bağımlılığın yükü ücretli çalışanlara kaydırdığını ve tekrarlanan aflara son verip dijitalleşmeyi genişletmenin kayıt altına almada daha kalıcı bir yol sunduğunu savunuyor.",
+      "pdf": "Makaleyi oku (PDF, İngilizce)"
     },
-    "teaser": {
-      "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
-      "label": "Deneme",
+    "essay": {
+      "kind": "Deneme",
+      "meta": "4 sayfa, Kasım 2026'da güncellendi",
+      "metaLong": "Temmuz 2026'da yazıldı, Kasım 2026'da güncellendi. 4 sayfa, 18 numaralı kaynak.",
       "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
-      "cta": "Şimdi Oku →"
+      "href": "/work/healthcare-private-sector/tr/",
+      "summary": "Sağlık hizmeti piyasaya bırakılabilir mi? Amerika, Tayvan ve Türkiye'yi numaralı kaynaklarla karşılaştıran bir deneme.",
+      "long": "Sağlık hizmeti tamamen piyasaya bırakılabilir mi? Deneme; Büyük Buhran'da bağışlar azalınca Amerika'daki hayır hastanelerine neler olduğunu, Tayvan'ın 1995'ten sonra hibrit sistemini nasıl kurduğunu ve Türkiye'de aşırı kullanım ile idari giderlerin sistemi nasıl zorladığını ele alıyor.",
+      "read": "Denemeyi oku",
+      "pdf": "PDF (İngilizce)"
     }
   },
   "about": {
-    "sectionLabel": "Hakkımda",
-    "heading": "Ayberk Ceyran",
-    "paragraph1": "2007 doğumluyum, Ankara'da doğdum ancak aslen Malatya, Hekimhanlıyım. Ekonomi, yazılım, veri analizi ve yapay zekâ disiplinlerinin kesişim noktasında yer alan geniş bir ilgi alanına sahibim. Özellikle Python ile yazılım geliştirme, veri bilimi ve web teknolojileri üzerine yoğunlaşarak teknik yetkinliklerimi her geçen gün ileriye taşıyorum. Şu an akademik hedeflerim doğrultusunda SAT sınavına hazırlanıyor; eğitim hayatımı ABD'de ekonomi ve veri analitiği alanlarında sürdürmeyi hedefliyorum.",
-    "paragraph2": "Bu web sitesini; projelerimi, araştırmalarımı ve öğrenme sürecimdeki çıktıları bir araya getiren dijital bir portfolyo olarak tasarladım. Burada paylaştığım içeriklerin hem kendi gelişimimi belgelemek hem de benzer ilgi alanlarına sahip kişiler için bir kaynak oluşturmasını amaçlıyorum.",
-    "paragraph3": "Uzun vadede teknoloji ve ekonomi disiplinlerini entegre ederek katma değerli projeler üretmeyi, akademik araştırmalar yapmayı ve bilgi üretimine katkıda bulunmayı hedefliyorum.",
-    "paragraph5": "Siteme vakit ayırdığınız için teşekkür ederim."
-  },
-  "projects": {
-    "sectionLabel": "Projeler",
-    "heading": "Projeler",
-    "fabText": "İletişime Geç",
-    "items": [
-      {
-        "type": "Araştırma Makalesi · İngilizce",
-        "title": "Choice, Constraint, and Compliance: An Informal Economy Formalization Perspective",
-        "description": "Kayıt dışı ekonomi ve vergi uyumu üzerine bağımsız bir araştırma makalesi. Bazı insanların neden kayıt dışı çalışmayı tercih ettiğini, bazılarının ise neden buna mecbur kaldığını açıklıyor; yedi ülkeyi (İsveç, Almanya, İtalya, Estonya, Brezilya, Arjantin ve Türkiye) karşılaştırıyor ve Türkiye için dersler çıkarıyor.",
-        "meta": "22 sayfa · Kasım 2026'da güncellendi",
-        "pdf": "Makaleyi oku (PDF)"
-      },
-      {
-        "type": "Deneme",
-        "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
-        "description": "Özel, kamu ve hibrit sağlık sistemlerini Amerika, Tayvan ve Türkiye örnekleri üzerinden karşılaştıran, numaralı kaynaklara dayanan bir deneme.",
-        "meta": "4 sayfa · Kasım 2026'da güncellendi",
-        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
-        "online": "Sitede oku",
-        "pdf": "PDF (İngilizce)"
-      }
-    ]
-  },
-  "blog": {
-    "sectionLabel": "Blog / Makale",
-    "heading": "Blog / Makale",
-    "readMore": "Devamını Oku",
-    "searchPlaceholder": "Makalelerde ara...",
-    "posts": [
-      {
-        "date": "19 Temmuz 2026",
-        "href": "blog-saglik-sistemi-ozel-mi-devlet-mi.html",
-        "title": "Sağlık Sistemi Özel Sektöre Bırakılabilir mi?",
-        "description": "Özel, kamu ve hibrit sağlık modellerini; Amerika, Küba ve Numbeo Sağlık Hizmetleri Endeksi'nde sekiz yıldır üst üste birinci olan Tayvan üzerinden karşılaştıran bir değerlendirme.",
-        "pdf": "PDF (İngilizce)"
-      }
-    ]
-  },
-  "contact": {
-    "sectionLabel": "İletişim",
-    "heading": "İletişim",
-    "intro": "Görüş, öneri ve iş birliği talepleriniz için bana ulaşabilirsiniz.",
-    "labelEmail": "E-posta",
-    "labelInstagram": "Instagram",
-    "labelX": "X"
+    "title": "Hakkımda",
+    "p1": "2007 doğumluyum; Ankara'da doğdum, ancak aslen Malatya Hekimhanlıyım. Ekonomi, yazılım, veri analizi ve yapay zekâ disiplinlerinin kesişim noktasında yer alan geniş bir ilgi alanına sahibim. Özellikle Python ile yazılım geliştirme, veri bilimi ve web teknolojileri üzerine yoğunlaşarak teknik yetkinliklerimi her geçen gün ileriye taşıyorum. Şu an SAT sınavına hazırlanıyorum ve eğitim hayatımı ABD'de ekonomi ve veri analitiği alanlarında sürdürmeyi hedefliyorum.",
+    "p2": "Bu web sitesini; projelerimi, araştırmalarımı ve öğrenme sürecimdeki çıktıları bir araya getiren dijital bir portfolyo olarak tasarladım. Burada paylaştığım içeriklerin hem kendi gelişimimi belgelemesini hem de benzer ilgi alanlarına sahip kişiler için bir kaynak oluşturmasını amaçlıyorum.",
+    "p3": "Uzun vadede teknoloji ve ekonomi disiplinlerini bir araya getirerek katma değerli projeler üretmeyi, akademik araştırmalar yapmayı ve bilgi üretimine katkıda bulunmayı hedefliyorum.",
+    "p4": "Siteme vakit ayırdığınız için teşekkür ederim."
   },
   "footer": {
-    "rights": "Tüm hakları saklıdır."
+    "heading": "İletişim",
+    "note": "Görüşleriniz, çalışmalarımla ilgili sorularınız ve iş birliği talepleriniz için yazabilirsiniz."
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "text": "Bu sayfa mevcut değil. Site Kasım 2026'da yeniden düzenlendi; eski bir bağlantı sizi buraya getirmiş olabilir.",
+    "home": "Ana sayfaya dön",
+    "work": "Tüm çalışmalar"
   }
 }
